@@ -1,0 +1,31 @@
+---
+layout: item.hbs
+title: List - Unordered
+tags: element
+description: The <code>&lt;ul&gt;</code> tag is used to create a bulleted list.
+---
+<ul>
+  <li>Unordered list Style: Ut enim ad minim veniam.</li>
+  <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <ul>
+      <li>Nested list Style.</li>
+      <li>Quis nostrud exercitation ullamco laboris.</li>
+    </ul>
+  </li>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+</ul>
+
+{{#markdown}}
+```
+<ul>
+  <li>...</li>
+  <li>...</li>
+  <li>...
+    <ul>
+      <li>...</li>
+      <li>...</li>
+    </ul>
+  </li>
+</ul>
+```
+{{/markdown}}

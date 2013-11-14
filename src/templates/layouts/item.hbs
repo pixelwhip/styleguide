@@ -1,0 +1,14 @@
+---
+layout: default.hbs
+---
+<h3 class="styleguide-title">{{title}}</h3>
+<p class="styleguide-description">{{{description}}}</p>
+<div class="styleguide-item article-body">
+{{body}}
+</div>
+
+{{#if showcode}}
+  <pre><code>
+{{{ decode this.page.page}}}
+</code></pre>
+{{/if}}

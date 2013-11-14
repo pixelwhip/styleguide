@@ -1,0 +1,30 @@
+---
+layout: item.hbs
+title: List - Ordered
+tags: element
+description: 'The <code>&lt;ol&gt;</code> tag is used to create a numbered list.'
+---
+<ol>
+  <li>Ordered list Style: Ut enim ad minim veniam.</li>
+  <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <ol>
+      <li>Nested list Style.</li>
+      <li>Quis nostrud exercitation ullamco laboris.</li>
+    </ol>
+  </li>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+</ol>
+
+{{#markdown}}
+```
+<ol>
+  <li>...</li>
+  <li>...</li>
+  <li>...
+    <ol>
+      <li>...</li>
+      <li>...</li>
+    </ol>
+</ol>
+```
+{{/markdown}}
