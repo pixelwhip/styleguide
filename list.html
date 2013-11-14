@@ -1,0 +1,353 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  </head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Link | Client Name</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="assets/styles/assemble.css">
+    <link rel="stylesheet" href="assets/styles/github.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header class="masthead subhead">
+      <h1> Client Name </h1>
+      <h2> Style Guide </h1>
+    </header>
+    
+<div class="sg-nav">
+  <h1 class="navbar-brand" href="../dest/index.html">Client Name</h1>
+  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">collapse</button>
+</div>
+
+
+    <div class="main">
+      
+<h3 class="styleguide-title">Link</h3>
+<p class="styleguide-description">Links provide users a way to navigate from one page to another and are created with the <code>&lt;a&gt;</code> tag.</p>
+<div class="styleguide-item article-body">
+
+<p>This is a <a href="#">inline link</a>.</p>
+
+<pre><code>&lt;a href=&quot;http://...&quot;&gt;...&lt;/a&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: Small
+tags: element
+description: The <code>&lt;small&gt;</code> tag is used to denote side content or <i>fine-print</i> such as disclaimers or license information.
+---
+<small>Colorado Public Radio is not responsible for hearing loss due to improperly configured volume.</small>
+
+<pre><code>&lt;small&gt;...&lt;/small&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: Blockquote
+tags: element
+description: 'Blockquotes are defined with the <code>&lt;blockquote&gt;</code> tag. They are used to show longer quotations or excerpts from other text. <i>Note: The following example shows a blockquote using the default green institutional color.  This color will be determined by the station in which the content appears.'
+---
+<blockquote><p>I have a theory that you can make any sentence seem profound by writing the name of a dead philosopher at the end of it.</p>
+  <footer>Plato</footer>
+  </blockquote>
+
+<pre><code>Single Paragraph
+
+&lt;blockquote&gt;...&lt;/blockquote&gt;
+
+Multiple Paragraphs
+
+&lt;blockquote&gt;
+  &lt;p&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+&lt;/blockquote&gt;
+
+With Citation
+
+&lt;blockquote&gt;
+  &lt;p&gt;I have a theory...&lt;/p&gt;
+  &lt;footer&gt;Plato&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: Headings
+tags: element
+description: Heading tags <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code> are used to title new sections of content.  Note: <code>&lt;h1&gt;</code> is used for the title of an article and is automatically populated by the CMS. It is advised that you only use <code>&lt;h2&gt;</code> and below when authoring content.
+---
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+
+
+---
+layout: item.hbs
+title: Color
+tags: element
+description: '<code>#4AAA42</code> Green'
+---
+<div class="stylguide-color-swatch" style="background-color: #4AAA42;"></div></div>
+
+"clr-green"></a>
+
+---
+layout: item.hbs
+title: List - Ordered
+tags: element
+description: 'The <code>&lt;ol&gt;</code> tag is used to create a numbered list.'
+---
+<ol>
+  <li>Ordered list Style: Ut enim ad minim veniam.</li>
+  <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <ol>
+      <li>Nested list Style.</li>
+      <li>Quis nostrud exercitation ullamco laboris.</li>
+    </ol>
+  </li>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+</ol>
+
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...
+    &lt;ol&gt;
+      &lt;li&gt;...&lt;/li&gt;
+      &lt;li&gt;...&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/ol&gt;</code></pre>
+
+
+---
+layout: item.hbs
+title: List - Unordered
+tags: element
+description: The <code>&lt;ul&gt;</code> tag is used to create a bulleted list.
+---
+<ul>
+  <li>Unordered list Style: Ut enim ad minim veniam.</li>
+  <li>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <ul>
+      <li>Nested list Style.</li>
+      <li>Quis nostrud exercitation ullamco laboris.</li>
+    </ul>
+  </li>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+</ul>
+
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...
+    &lt;ul&gt;
+      &lt;li&gt;...&lt;/li&gt;
+      &lt;li&gt;...&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: List - Ruled
+tags: element
+description: 'Ruled lists can be created by applying a <code>list--ruled</code> class to <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tags and the <code>list-item</code>class to each <code>&lt;li&gt;</code> within.'
+---
+<ul class="list--ruled">
+  <li class="list-item">Unordered list Style: Ut enim ad minim veniam.</li>
+  <li class="list-item">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+  <li class="list-item">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+</ul>
+
+<pre><code>&lt;ul class=&quot;list--ruled&quot;&gt;
+  &lt;li class=&quot;list-item&quot;&gt;...&lt;/li&gt;
+  &lt;li class=&quot;list-item&quot;&gt;...&lt;/li&gt;
+  &lt;li class=&quot;list-item&quot;&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+
+---
+layout: item.hbs
+title: Table
+tags: element
+description: 'The <code>&lt;table&gt;</code> tag is used to denote tabular data.'
+---
+<table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="sticky-enabled tableheader-processed sticky-table has-table-ruler">
+<caption>lacinia nec aliquam</caption>
+ <thead><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>Iaculis velit neque</td><td>Turpis massa pellentesque</td><td>In nec amet</td><td>Iaculis consectetur erat</td><td>Lorem nam ac</td> </tr>
+ <tr class="even"><td>Sed massa convallis</td><td>Gravida nam et</td><td>A et euismod</td><td>Pellentesque adipiscing dui</td><td>Vestibulum a eros</td> </tr>
+ <tr class="odd"><td>Sed dignissim nisl</td><td>Fusce nisl egestas</td><td>Consectetur nec erat</td><td>Egestas lacinia ac</td><td>Dui dignissim eget</td> </tr>
+ <tr class="even"><td>Ac felis magna</td><td>Elementum convallis ac</td><td>Turpis ac mi</td><td>Dui et venenatis</td><td>Feugiat et erat</td> </tr>
+ <tr class="odd"><td>Ac cras iaculis</td><td>Neque neque lacus</td><td>Velit elit iaculis</td><td>Tortor aliquam et</td><td>Iaculis pellentesque duis</td> </tr>
+</tbody>
+</table>
+
+
+<pre><code>&lt;table&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;...&lt;/th&gt;&lt;th&gt;...&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: Table - Bordered
+tags: element
+description: 'Add the <code>table--bordered</code> class to the table element.'
+---
+<table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="table--bordered sticky-enabled tableheader-processed sticky-table has-table-ruler">
+<caption>lacinia nec aliquam</caption>
+ <thead><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>Iaculis velit neque</td><td>Turpis massa pellentesque</td><td>In nec amet</td><td>Iaculis consectetur erat</td><td>Lorem nam ac</td> </tr>
+ <tr class="even"><td>Sed massa convallis</td><td>Gravida nam et</td><td>A et euismod</td><td>Pellentesque adipiscing dui</td><td>Vestibulum a eros</td> </tr>
+ <tr class="odd"><td>Sed dignissim nisl</td><td>Fusce nisl egestas</td><td>Consectetur nec erat</td><td>Egestas lacinia ac</td><td>Dui dignissim eget</td> </tr>
+ <tr class="even"><td>Ac felis magna</td><td>Elementum convallis ac</td><td>Turpis ac mi</td><td>Dui et venenatis</td><td>Feugiat et erat</td> </tr>
+ <tr class="odd"><td>Ac cras iaculis</td><td>Neque neque lacus</td><td>Velit elit iaculis</td><td>Tortor aliquam et</td><td>Iaculis pellentesque duis</td> </tr>
+</tbody>
+</table>
+
+<pre><code>&lt;table class=&quot;table--bordered&quot;&gt;...&lt;/table&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: Table - Borderless
+tags: element
+description: 'Add the <code>table--borderless</code> class to the table element.'
+---
+<table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="table--borderless sticky-enabled tableheader-processed sticky-table has-table-ruler">
+<caption>lacinia nec aliquam</caption>
+ <thead><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>Iaculis velit neque</td><td>Turpis massa pellentesque</td><td>In nec amet</td><td>Iaculis consectetur erat</td><td>Lorem nam ac</td> </tr>
+ <tr class="even"><td>Sed massa convallis</td><td>Gravida nam et</td><td>A et euismod</td><td>Pellentesque adipiscing dui</td><td>Vestibulum a eros</td> </tr>
+ <tr class="odd"><td>Sed dignissim nisl</td><td>Fusce nisl egestas</td><td>Consectetur nec erat</td><td>Egestas lacinia ac</td><td>Dui dignissim eget</td> </tr>
+ <tr class="even"><td>Ac felis magna</td><td>Elementum convallis ac</td><td>Turpis ac mi</td><td>Dui et venenatis</td><td>Feugiat et erat</td> </tr>
+ <tr class="odd"><td>Ac cras iaculis</td><td>Neque neque lacus</td><td>Velit elit iaculis</td><td>Tortor aliquam et</td><td>Iaculis pellentesque duis</td> </tr>
+</tbody>
+</table>
+
+<pre><code>&lt;table class=&quot;table--borderless&quot;&gt;...&lt;/table&gt;</code></pre>
+
+
+---
+layout: item.hbs
+title: Table - Striped
+tags: element
+description: 'Add the <code>table--striped</code> class to the table element.'
+---
+<table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="table--striped sticky-enabled tableheader-processed sticky-table has-table-ruler">
+<caption>lacinia nec aliquam</caption>
+ <thead><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>Iaculis velit neque</td><td>Turpis massa pellentesque</td><td>In nec amet</td><td>Iaculis consectetur erat</td><td>Lorem nam ac</td> </tr>
+ <tr class="even"><td>Sed massa convallis</td><td>Gravida nam et</td><td>A et euismod</td><td>Pellentesque adipiscing dui</td><td>Vestibulum a eros</td> </tr>
+ <tr class="odd"><td>Sed dignissim nisl</td><td>Fusce nisl egestas</td><td>Consectetur nec erat</td><td>Egestas lacinia ac</td><td>Dui dignissim eget</td> </tr>
+ <tr class="even"><td>Ac felis magna</td><td>Elementum convallis ac</td><td>Turpis ac mi</td><td>Dui et venenatis</td><td>Feugiat et erat</td> </tr>
+ <tr class="odd"><td>Ac cras iaculis</td><td>Neque neque lacus</td><td>Velit elit iaculis</td><td>Tortor aliquam et</td><td>Iaculis pellentesque duis</td> </tr>
+</tbody>
+</table>
+
+<pre><code>&lt;table class=&quot;table--striped&quot;&gt;...&lt;/table&gt;</code></pre>
+
+
+---
+layout: item.hbs
+title: Table - Condensed
+tags: element
+description: 'Add the <code>table--condensed</code> class to the table element.'
+---
+<table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="table--condensed sticky-enabled tableheader-processed sticky-table has-table-ruler">
+<caption>lacinia nec aliquam</caption>
+ <thead><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>Iaculis velit neque</td><td>Turpis massa pellentesque</td><td>In nec amet</td><td>Iaculis consectetur erat</td><td>Lorem nam ac</td> </tr>
+ <tr class="even"><td>Sed massa convallis</td><td>Gravida nam et</td><td>A et euismod</td><td>Pellentesque adipiscing dui</td><td>Vestibulum a eros</td> </tr>
+ <tr class="odd"><td>Sed dignissim nisl</td><td>Fusce nisl egestas</td><td>Consectetur nec erat</td><td>Egestas lacinia ac</td><td>Dui dignissim eget</td> </tr>
+ <tr class="even"><td>Ac felis magna</td><td>Elementum convallis ac</td><td>Turpis ac mi</td><td>Dui et venenatis</td><td>Feugiat et erat</td> </tr>
+ <tr class="odd"><td>Ac cras iaculis</td><td>Neque neque lacus</td><td>Velit elit iaculis</td><td>Tortor aliquam et</td><td>Iaculis pellentesque duis</td> </tr>
+</tbody>
+</table>
+
+<pre><code>&lt;table class=&quot;table--condensed&quot;&gt;...&lt;/table&gt;</code></pre>
+
+
+
+---
+layout: item.hbs
+title: Table - Combined
+tags: element
+description: Any of the above classes can be combined on a single table for a combined effect.
+---
+<table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="table--striped table--bordered table--condensed sticky-enabled tableheader-processed sticky-table has-table-ruler">
+<caption>lacinia nec aliquam</caption>
+ <thead><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td>Iaculis velit neque</td><td>Turpis massa pellentesque</td><td>In nec amet</td><td>Iaculis consectetur erat</td><td>Lorem nam ac</td> </tr>
+ <tr class="even"><td>Sed massa convallis</td><td>Gravida nam et</td><td>A et euismod</td><td>Pellentesque adipiscing dui</td><td>Vestibulum a eros</td> </tr>
+ <tr class="odd"><td>Sed dignissim nisl</td><td>Fusce nisl egestas</td><td>Consectetur nec erat</td><td>Egestas lacinia ac</td><td>Dui dignissim eget</td> </tr>
+ <tr class="even"><td>Ac felis magna</td><td>Elementum convallis ac</td><td>Turpis ac mi</td><td>Dui et venenatis</td><td>Feugiat et erat</td> </tr>
+ <tr class="odd"><td>Ac cras iaculis</td><td>Neque neque lacus</td><td>Velit elit iaculis</td><td>Tortor aliquam et</td><td>Iaculis pellentesque duis</td> </tr>
+</tbody>
+</table>
+
+<pre><code>&lt;table class=&quot;table--striped table--condensed table--bordered&quot;&gt;...&lt;/table&gt;</code></pre>
+</div>
+
+</div>
+
+
+
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="assets/scripts/highlight.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
