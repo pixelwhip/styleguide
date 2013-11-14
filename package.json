@@ -34,7 +34,8 @@
     "connect-livereload": "~0.2.0",
     "time-grunt": "~0.1.1",
     "assemble": "~0.4.23",
-    "lodash": "~2.3.0"
+    "lodash": "~2.3.0",
+    "grunt-gh-pages": "~0.8.1"
   },
   "engines": {
     "node": ">=0.8.0"

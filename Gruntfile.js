@@ -340,9 +340,15 @@ module.exports = function (grunt) {
         'svgmin',
         'htmlmin'
       ]
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
-
+  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('assemble');
 
   grunt.registerTask('server', function (target) {
