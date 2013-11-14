@@ -117,7 +117,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        path: 'http://styleguide.loc:<%= connect.options.port %>'
+        path: 'http://localhost:<%= connect.options.port %>'
       }
     },
     clean: {
