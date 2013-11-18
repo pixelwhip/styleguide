@@ -4,11 +4,15 @@ layout: default.hbs
 <h3 class="styleguide-title">{{title}}</h3>
 <p class="styleguide-description">{{{description}}}</p>
 <div class="styleguide-item article-body">
+{{#markdown}}
 {{body}}
+{{/markdown}}
 </div>
 
 {{#if showcode}}
-  <pre><code>
+<pre><code>
 {{{ decode this.page.page}}}
 </code></pre>
 {{/if}}
+
+{{> variants}}

@@ -3,6 +3,12 @@ layout: item.hbs
 title: Table
 tags: element
 description: 'The <code>&lt;table&gt;</code> tag is used to denote tabular data.'
+variants:
+- table-bordered
+- table-borderless
+- table-striped
+- table-condensed
+- table-combined
 ---
 <table class="sticky-header has-table-ruler" style="position: fixed; top: 132px; left: 229.984375px; visibility: hidden;"><thead style=""><tr><th>Turpis magna mattis</th><th>Consequat gravida in</th><th>Neque vulputate magna</th><th>Sit aliquam lorem</th><th>Et sed urna</th> </tr></thead></table><table class="sticky-enabled tableheader-processed sticky-table has-table-ruler">
 <caption>lacinia nec aliquam</caption>
@@ -16,8 +22,6 @@ description: 'The <code>&lt;table&gt;</code> tag is used to denote tabular data.
 </tbody>
 </table>
 
-
-{{#markdown}}
 ```
 <table>
   <caption>...</caption>
@@ -30,4 +34,3 @@ description: 'The <code>&lt;table&gt;</code> tag is used to denote tabular data.
   </tbody>
 </table>
 ```
-{{/markdown}}

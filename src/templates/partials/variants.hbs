@@ -1,0 +1,10 @@
+---
+component: variants
+---
+{{#each variants}}
+  {{#each ../pages}}
+    {{#is this.basename ../this}}
+      {{> variant}}
+    {{/is}}
+  {{/each}}
+{{/each}}
