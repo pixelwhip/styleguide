@@ -38,4 +38,4 @@ This does a few things.  First it creates a fresh styleguide.  It then starts a 
 
 ## Editing the styleguide
 
-All source files are located in the ```/src``` directory.  The actual content and styleguide elements are located in ```/src/content```.
+All source files are located in the ```/src``` directory.  The actual content and styleguide elements are located in ```/src/content```.  The generated files are created in and served from ```/dist```.  The ```/dist``` directory gets wiped on each build so don't edit anything in there directly.
