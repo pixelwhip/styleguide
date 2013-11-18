@@ -17,6 +17,8 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
+  // Uncomment the following to include environment specific settings in config.js
+  // require('./config');
 
   // configurable paths
   var yeomanConfig = {
