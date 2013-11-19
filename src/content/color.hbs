@@ -1,9 +1,40 @@
 ---
 layout: item.hbs
-title: Color
+title: Color Palette
 tags: element
-description: '<code>#4AAA42</code> Green'
+colors:
+- group: Neutral
+  color:
+  - sass: $gray-white
+    hex: '#f8f8f8'
+  - sass: $gray-lightest
+    hex: '#f6f6f6'
+  - sass: $gray-lighter
+    hex: '#dadbdc'
+  - sass: $gray-light
+    hex: '#b3b3b3'
+  - sass: $gray
+    hex: '#999d9b'
+  - sass: $gray-dark
+    hex: '#404540'
+  - sass: $gray-darker
+    hex: '#282d27'
+  - sass: $gray-darkest
+    hex: '#292929'
+  - sass: $gray-black
+    hex: '#141414'
+- group: Greens
+  color:
+  - sass: $green
+    hex: '#4b8b2a'
+  - sass: $green-dark
+    hex: '#257f21'
 ---
-<div class="stylguide-color-swatch" style="background-color: #4AAA42;"></div></div>
-
-"clr-green"></a>
+{{#colors}}
+<div class="sg-color-group">
+  <h2 class="sg-color-group-title">{{group}}</h2>
+  {{#color}}
+    {{> swatch}}
+  {{/color}}
+</div>
+{{/colors}}
