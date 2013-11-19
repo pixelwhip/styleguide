@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="assets/styles/assemble.css">
+    <link rel="stylesheet" href="assets/styles/sg.css">
     <link rel="stylesheet" href="assets/styles/github.css">
-    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- Reference your project's stylesheets below -->
+    <!--<link rel="stylesheet" href=""> -->
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -23,121 +24,117 @@
   </head>
   <body>
     <header class="masthead subhead">
-      <h1> Client Name </h1>
-      <h2> <a href="/">Style Guide</a> </h1>
+      <h1>Style Guide<small> <a href="/">Client Name </a></small></h1>
     </header>
-    <div class="main">
-      
-
+    
+<nav class="sg-nav">
   
-  <h1>element</h1>
-  <ul>
+  <h3 class="sg-nav-label">component</h3>
+  <ul class="sg-nav-list">
     
-      <li>
-        <a href="abbr.html">Abbreviations</a>
-      </li>
-    
-      <li>
-        <a href="article.html">Sample Article</a>
-      </li>
-    
-      <li>
-        <a href="blockquote.html">Blockquote</a>
-      </li>
-    
-      <li>
-        <a href="body-copy.html">Body Copy</a>
-      </li>
-    
-      <li>
-        <a href="bold.html">Bold</a>
-      </li>
-    
-      <li>
-        <a href="color.html">Color</a>
-      </li>
-    
-      <li>
-        <a href="corrections.html">Corrections</a>
-      </li>
-    
-      <li>
-        <a href="emphasis-strong.html">Strong Emphasis</a>
-      </li>
-    
-      <li>
-        <a href="emphasis.html">Emphasis</a>
-      </li>
-    
-      <li>
-        <a href="headings.html">Headings</a>
-      </li>
-    
-      <li>
-        <a href="intro.html">Introduction</a>
-      </li>
-    
-      <li>
-        <a href="italic.html">Italic</a>
-      </li>
-    
-      <li>
-        <a href="link.html">Link</a>
-      </li>
-    
-      <li>
-        <a href="list--ruled.html">List - Ruled</a>
-      </li>
-    
-      <li>
-        <a href="list-ordered.html">List - Ordered</a>
-      </li>
-    
-      <li>
-        <a href="list-unordered.html">List - Unordered</a>
-      </li>
-    
-      <li>
-        <a href="small.html">Small</a>
-      </li>
-    
-      <li>
-        <a href="table-bordered.html">Table - Bordered</a>
-      </li>
-    
-      <li>
-        <a href="table-borderless.html">Table - Borderless</a>
-      </li>
-    
-      <li>
-        <a href="table-combined.html">Table - Combined</a>
-      </li>
-    
-      <li>
-        <a href="table-condensed.html">Table - Condensed</a>
-      </li>
-    
-      <li>
-        <a href="table-striped.html">Table - Striped</a>
-      </li>
-    
-      <li>
-        <a href="table.html">Table</a>
+      <li class="sg-nav-list-item">
+        <a href="article.html" class="sg-nav-link">Sample Article</a>
       </li>
     
   </ul>
-
   
+  <h3 class="sg-nav-label">element</h3>
+  <ul class="sg-nav-list">
     
-<h4 class="styleguide-title">Abbreviations</h4>
-<p class="styleguide-description">The <code>&lt;abbr&gt;</code> tag is used in conjunction with the <code>title</code> attribute to denote abbreviations.</p>
-<div class="styleguide-item article-body">
-<p>We only listen to <abbr title="Colorado Public Radio">CPR</abbr></p>
+      <li class="sg-nav-list-item">
+        <a href="abbr.html" class="sg-nav-link">Abbreviations</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="blockquote.html" class="sg-nav-link">Blockquote</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="body-copy.html" class="sg-nav-link">Body Copy</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="bold.html" class="sg-nav-link">Bold</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="color.html" class="sg-nav-link">Color Palette</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="corrections.html" class="sg-nav-link">Corrections</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="emphasis-strong.html" class="sg-nav-link">Strong Emphasis</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="emphasis.html" class="sg-nav-link">Emphasis</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="headings.html" class="sg-nav-link">Headings</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="intro.html" class="sg-nav-link">Introduction</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="italic.html" class="sg-nav-link">Italic</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="link.html" class="sg-nav-link">Link</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="list--ruled.html" class="sg-nav-link">List - Ruled</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="list-ordered.html" class="sg-nav-link">List - Ordered</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="list-unordered.html" class="sg-nav-link">List - Unordered</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="small.html" class="sg-nav-link">Small</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="table-bordered.html" class="sg-nav-link">Table - Bordered</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="table-borderless.html" class="sg-nav-link">Table - Borderless</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="table-combined.html" class="sg-nav-link">Table - Combined</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="table-condensed.html" class="sg-nav-link">Table - Condensed</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="table-striped.html" class="sg-nav-link">Table - Striped</a>
+      </li>
+    
+      <li class="sg-nav-list-item">
+        <a href="table.html" class="sg-nav-link">Table</a>
+      </li>
+    
+  </ul>
+  
+</nav>
 
-
-<pre><code>&lt;abbr title=&quot;Colorado Public Radio&quot;&gt;CPR&lt;/abbr&gt;.</code></pre>
-
-</div>
+    <div class="main">
+      
 
   
     
@@ -178,13 +175,27 @@
 </div>
 
   
+
+  
+    
+<h4 class="styleguide-title">Abbreviations</h4>
+<p class="styleguide-description">The <code>&lt;abbr&gt;</code> tag is used in conjunction with the <code>title</code> attribute to denote abbreviations.</p>
+<div class="styleguide-item article-body">
+<p>We only listen to <abbr title="Colorado Public Radio">CPR</abbr></p>
+
+
+<pre><code>&lt;abbr title=&quot;Colorado Public Radio&quot;&gt;CPR&lt;/abbr&gt;.</code></pre>
+
+</div>
+
+  
     
 <h4 class="styleguide-title">Blockquote</h4>
-<p class="styleguide-description">Blockquotes are defined with the <code>&lt;blockquote&gt;</code> tag. They are used to show longer quotations or excerpts from other text. <i>Note: The following example shows a blockquote using the default green institutional color.  This color will be determined by the station in which the content appears.</p>
+<p class="styleguide-description">Blockquotes are defined with the <code>&lt;blockquote&gt;</code> tag. They are used to show longer quotations or excerpts from other text.</p>
 <div class="styleguide-item article-body">
 <blockquote><p>I have a theory that you can make any sentence seem profound by writing the name of a dead philosopher at the end of it.</p>
   <footer>Plato</footer>
-  </blockquote>
+</blockquote>
 
 
 <pre><code>Single Paragraph
@@ -235,12 +246,17 @@ With Citation
 
   
     
-<h4 class="styleguide-title">Color</h4>
-<p class="styleguide-description"><code>#4AAA42</code> Green</p>
+<h4 class="styleguide-title">Color Palette</h4>
+<p class="styleguide-description"></p>
 <div class="styleguide-item article-body">
-<div class="stylguide-color-swatch" style="background-color: #4AAA42;"></div></div>
-
-<p>&quot;clr-green&quot;&gt;</a></p>
+<p>{{#colors}}</p>
+<p><div class="sg-color-group">
+  <h2 class="sg-color-group-title">{{group}}</h2>
+  {{#color}}
+    {{&gt; swatch}}
+  {{/color}}
+</div>
+{{/colors}}</p>
 
 </div>
 
@@ -565,8 +581,6 @@ With Citation
 &lt;/table&gt;</code></pre>
 
 </div>
-
-  
 
   
 
