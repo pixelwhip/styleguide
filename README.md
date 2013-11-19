@@ -37,6 +37,10 @@ And then
 $ bundle install
 ```
 
+And then
+
+![NO And Then](http://31.media.tumblr.com/tumblr_lq0intuKK01qa9vqgo1_500.gif)
+
 ### Firing up styleguide
 
 #### Download or checkout this repo
