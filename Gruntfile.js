@@ -313,6 +313,13 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/scripts',
         dest: '<%= yeoman.dist %>/assets/scripts/',
         src: '**/*.{js,png}'
+      },
+      bower: {
+        expand: true,
+        dot: true,
+        cwd: '<%= yeoman.app %>/bower_components',
+        dest: '<%= yeoman.dist %>/assets/bower_components/',
+        src: '**/*.{js,png}'
       }
     },
     modernizr: {
@@ -329,16 +336,19 @@ module.exports = function (grunt) {
       server: [
         'compass',
         'copy:styles',
-        'copy:scripts'
+        'copy:scripts',
+        'copy:bower'
       ],
       test: [
         'copy:styles',
-        'copy:scripts'
+        'copy:scripts',
+        'copy:bower'
       ],
       dist: [
         'compass',
         'copy:styles',
         'copy:scripts',
+        'copy:bower',
         'imagemin',
         'svgmin',
         'htmlmin'
