@@ -2,8 +2,6 @@
 
 > Styleguide is a static site generator for creating... wait for it... Styleguides!
 
-
-
 ## Getting started
 
 ### Dependencies
@@ -19,6 +17,19 @@ $ npm install -g grunt-cli
 ```
 
 The ```-g``` flag installs the grunt command line interface node package globally.  For the most other packages, you'll want to leave out the ```-g``` and install them locally (to your current project) on a per project basis.
+
+### Before first run
+You need to ```cd``` into your project directory and run the following commands.
+NOTE: You only need to do this for the first time compiling. 
+```
+$ npm install
+```
+
+And then
+
+```
+$ bower install
+```
 
 ### Firing up styleguide
 
