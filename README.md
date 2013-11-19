@@ -2,9 +2,10 @@
 
 > Styleguide is a static site generator for creating... wait for it... Styleguides!
 
-
-
 ## Getting started
+
+$ bower install
+$ npm install
 
 ### Dependencies
 
