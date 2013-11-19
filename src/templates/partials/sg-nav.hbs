@@ -1,7 +1,15 @@
 ---
 component: navbar
 ---
-<div class="sg-nav">
-  <h1 class="navbar-brand" href="{{relative page.dest "dest/index.html"}}">{{site.client}}</h1>
-  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="nav-collapse">collapse</button>
-</div>
+<nav class="sg-nav">
+  {{#each tags}}
+  <h3 class="sg-nav-label">{{tag}}</h3>
+  <ul class="sg-nav-list">
+    {{#each pages}}
+      <li class="sg-nav-list-item">
+        <a href="{{basename}}.html" class="sg-nav-link">{{data.title}}</a>
+      </li>
+    {{/each}}
+  </ul>
+  {{/each}}
+</nav>

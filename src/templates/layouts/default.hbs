@@ -24,9 +24,9 @@
   </head>
   <body>
     <header class="masthead subhead">
-      <h1> {{site.client}} </h1>
-      <h2> <a href="/">{{site.title}}</a> </h1>
+      <h1>{{site.title}}<small> <a href="/">{{site.client}} </a></small></h1>
     </header>
+    {{> sg-nav}}
     <div class="main">
       {{> body }}
     </div>

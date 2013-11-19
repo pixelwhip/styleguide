@@ -2,19 +2,7 @@
 title: Style Guide
 ---
 {{#each tags}}
-  {{#is tag "element"}}
-  <h1>{{tag}}</h1>
-  <ul>
-    {{#each pages}}
-      <li>
-        <a href="{{basename}}.html">{{data.title}}</a>
-      </li>
-    {{/each}}
-  </ul>
-
   {{#each pages}}
     {{> variant}}
   {{/each}}
-
-  {{/is}}
 {{/each}}
