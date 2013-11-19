@@ -31,6 +31,12 @@ And then
 $ bower install
 ```
 
+And then
+
+```
+$ bundle install
+```
+
 ### Firing up styleguide
 
 #### Download or checkout this repo
