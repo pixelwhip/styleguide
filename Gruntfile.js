@@ -158,7 +158,8 @@ module.exports = function (grunt) {
         httpImagesPath: '/images',
         httpGeneratedImagesPath: '/images/generated',
         httpFontsPath: '/styles/fonts',
-        relativeAssets: false
+        relativeAssets: false,
+        bundleExec: true
       },
       dist: {
         options: {
@@ -180,7 +181,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.tmp/styles/',
           src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          dest: '<%= yeoman.dist %>/assets/styles/'
         }]
       }
     },
@@ -361,7 +362,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'concurrent:server',
-      //'autoprefixer',
+      'autoprefixer',
       'connect:livereload',
       'assemble',
       'open',
@@ -372,7 +373,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'concurrent:test',
-    //'autoprefixer',
+    'autoprefixer',
     'assemble',
     'connect:test'
   ]);
@@ -381,7 +382,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'useminPrepare',
     'concurrent:dist',
-    //'autoprefixer',
+    'autoprefixer',
     'assemble',
     'concat',
     'cssmin',
