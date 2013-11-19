@@ -4,9 +4,6 @@
 
 ## Getting started
 
-$ bower install
-$ npm install
-
 ### Dependencies
 
 Styleguide is built with [Assemble](http://assemble.io), [Grunt](http://gruntjs.com/) and uses the [Handlebars](http://handlebarsjs.com/) templating language.
@@ -20,6 +17,19 @@ $ npm install -g grunt-cli
 ```
 
 The ```-g``` flag installs the grunt command line interface node package globally.  For the most other packages, you'll want to leave out the ```-g``` and install them locally (to your current project) on a per project basis.
+
+### Before first run
+You need to ```cd``` into your project directory and run the following commands.
+NOTE: You only need to do this for the first time compiling. 
+```
+$ npm install
+```
+
+And then
+
+```
+$ bower install
+```
 
 ### Firing up styleguide
 
