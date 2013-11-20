@@ -20,14 +20,30 @@ module.exports = function (grunt) {
   // Uncomment the following to include environment specific settings in config.js
   // require('./config');
 
+  // Allow configuration to be distributed across files.
+  function loadConfig(path) {
+    var glob = require('glob');
+    var object = {};
+    var key;
+
+    glob.sync('*', {cwd: path}).forEach(function(option) {
+      key = option.replace(/\.js$/,'');
+      object[key] = require(path + option);
+    });
+
+    return object;
+  }
+
   // configurable paths
   var yeomanConfig = {
     app: 'src',
     dist: 'dist'
   };
 
-  grunt.initConfig({
+  var config = {
     yeoman: yeomanConfig,
+    pkg: grunt.file.readJSON('package.json'),
+    env: process.env,
     watch: {
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
@@ -190,12 +206,7 @@ module.exports = function (grunt) {
     /*concat: {
         dist: {}
     },*/
-    'bower-install': {
-      app: {
-        html: '<%= yeoman.app %>/index.html',
-        ignorePath: '<%= yeoman.app %>/'
-      }
-    },
+
     // not enabled since usemin task does concat and uglify
     // check index.html to edit your build targets
     // enable this task if you prefer defining your build targets here
@@ -312,14 +323,14 @@ module.exports = function (grunt) {
         dot: true,
         cwd: '<%= yeoman.app %>/scripts',
         dest: '<%= yeoman.dist %>/assets/scripts/',
-        src: '**/*.{js,png}'
+        src: '**/*.{js}'
       },
       bower: {
         expand: true,
         dot: true,
         cwd: '<%= yeoman.app %>/bower_components',
         dest: '<%= yeoman.dist %>/assets/bower_components/',
-        src: '**/*.{js,png}'
+        src: '**/*.{js}'
       }
     },
     modernizr: {
@@ -360,9 +371,14 @@ module.exports = function (grunt) {
       },
       src: ['**']
     }
-  });
-  grunt.loadNpmTasks('grunt-gh-pages');
-  grunt.loadNpmTasks('assemble');
+  };
+
+  // Merge task configuration from ./tasks/options
+  grunt.util._.extend(config, loadConfig('./tasks/options/'));
+
+  grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
+
+  grunt.initConfig(config);
 
   grunt.registerTask('server', function (target) {
     if (target === 'dist') {
