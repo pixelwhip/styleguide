@@ -1,3 +1,35 @@
-body {
-  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+.sg-nav {
+  float: left;
+  width: 30%;
+  margin-right: -100%;
+}
+
+.sg-main {
+  float: left;
+  width: 75%;
+  margin-left: 25%;
+  padding: 0 24px;
+}
+
+.sg-footer {
+  font-size: .825em;
+  text-align: center;
+  clear: both;
+
+  address {
+    display: inline;
+  }
+}
+
+//
+// Colors
+//
+
+.sg-color {
+  display: inline-block;
+  width: 120px;
+}
+
+.sg-color-info {
+  font-size: .75em;
 }

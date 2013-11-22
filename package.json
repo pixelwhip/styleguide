@@ -35,7 +35,9 @@
     "time-grunt": "~0.1.1",
     "assemble": "~0.4.23",
     "lodash": "~2.3.0",
-    "grunt-gh-pages": "~0.8.1"
+    "grunt-gh-pages": "~0.8.1",
+    "glob": "~3.2.7",
+    "grunt-env": "~0.4.0"
   },
   "engines": {
     "node": ">=0.8.0"
