@@ -1,0 +1,89 @@
+// Based on http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/
+
+// Menu Container
+#sg-menu-container {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: -240px;
+  width: 240px;
+  height: 100%;
+  background: #454545;
+  font-family: sans-serif;
+
+  // Animation
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  // State: Open
+  &.is-open {
+    right: 0px;
+  }
+}
+
+@media screen and (max-height: 26.375em){
+  #sg-menu-container {
+    right: -190px;
+    width: 190px;
+    font-size: 90%;
+  }
+}
+
+// Menu toggle button
+#sg-menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 100%;
+
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.sg-menu {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.sg-menu-label {
+  color: #fafafa;
+  font-size: 1.2em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #333;
+}
+
+.sg-menu-list {
+  padding: 0;
+  margin: 0;
+}
+
+.sg-menu-item {
+  display: block;
+  margin: 0;
+}
+
+.sg-menu-link {
+  display: block;
+  padding: 1em 20px;
+  border-bottom: 1px solid #3c3c3c;
+  color: #fff;
+  font-size: .875em;
+  font-weight: 300;
+  text-decoration: none;
+
+  &:hover {
+    background: #777;
+  }
+
+  &:active {
+    background: #afafaf;
+    color: #47a3da;
+  }
+}

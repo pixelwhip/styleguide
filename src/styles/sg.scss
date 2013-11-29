@@ -1,14 +1,8 @@
-.sg-nav {
-  float: left;
-  width: 30%;
-  margin-right: -100%;
-}
+@import "partials/sg-menu";
 
-.sg-main {
-  float: left;
-  width: 75%;
-  margin-left: 25%;
-  padding: 0 24px;
+.sg-constrain {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .sg-footer {

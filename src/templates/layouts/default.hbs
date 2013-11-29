@@ -22,13 +22,16 @@
     <!-- endbuild -->
   </head>
   <body>
-    <header class="sg-masthead">
+    <header class="sg-masthead sg-constrain">
       <h1>{{site.title}}<small> <a href="/">{{site.client}} </a></small></h1>
     </header>
-    {{> sg-nav}}
-    <div class="sg-main">
+    {{> sg-menu}}
+    <div class="sg-main sg-constrain">
       {{> body }}
     </div>
+    <footer class="sg-footer sg-constrain">
+      Built by <address><a href="{{site.agency-url}}">{{site.agency}}</a></address>
+    </header>
     <!-- build:js {{assets}}/scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
@@ -38,10 +41,9 @@
 
     <!-- build:js {{assets}}/scripts/main.js -->
     <script src="{{assets}}/scripts/highlight.js"></script>
+    <script src="{{assets}}/scripts/classie.js"></script>
+    <script src="{{assets}}/scripts/sg-menu.js"></script>
     <script src="{{assets}}/scripts/main.js"></script>
     <!-- endbuild -->
-    <footer class="sg-footer">
-      Built by <address><a href="{{site.agency-url}}">{{site.agency}}</a></address>
-    </header>
   </body>
 </html>

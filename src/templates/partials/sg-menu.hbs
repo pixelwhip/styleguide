@@ -1,0 +1,18 @@
+---
+component: sg-menu
+---
+<div id="sg-menu-container" class="is-open">
+  <nav class="sg-menu sg-menu-vertical sg-menu-left sg-menu-open">
+    <button id="sg-menu-toggle" class="is-active">Menu</button>
+    {{#each tags}}
+    <h3 class="sg-menu-label">{{tag}}</h3>
+    <ul class="sg-menu-list">
+      {{#each pages}}
+        <li class="sg-menu-list-item">
+          <a href="{{basename}}.html" class="sg-menu-link">{{data.title}}</a>
+        </li>
+      {{/each}}
+    </ul>
+    {{/each}}
+  </nav>
+</div>
