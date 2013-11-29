@@ -33,3 +33,23 @@
 .sg-color-info {
   font-size: .75em;
 }
+
+//
+// Layouts
+//
+
+// Enable preview of empty layouts.
+[sg-layout-container] {
+  clear: both;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: rgba(black, .1);
+  outline: rgba(black, .2) solid 1px;
+  min-height: 200px;
+}
+
+[sg-layout-item] {
+  background-color: rgba(blue, .1);
+  outline: rgba(black, .2) solid 1px;
+  min-height: 200px;
+}
