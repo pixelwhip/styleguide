@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Italic | Client Name</title>
+    <title>Pager | Client Name</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -150,13 +150,37 @@
 
     <div class="sg-main sg-constrain">
       
-<h1 class="styleguide-title">Italic</h1>
-<p class="styleguide-description">The <code>&lt;i&gt;</code> tag is used to italicize text, such as movie titles, as well as to denote words that should be read in an alternate voice such as transliterated foreign words.</p>
+<h1 class="styleguide-title">Pager</h1>
+<p class="styleguide-description">Pagers are used to navigate between lists of content too long to fit on a single page.</p>
 <div class="styleguide-item article-body">
-<p>It was a great <i>Cinco de Mayo</i> celebration!</p>
+<div class="item-list">
+  <ul class="pager">
+    <li class="pager-first first"><a href="#">first</a></li>
+    <li class="pager-previous"><a href="#">previous</a></li>
+    <li class="pager-item"><a title="Go to page 1" href="#">1</a></li>
+    <li class="pager-current"><span>2</span></li>
+    <li class="pager-item"><a title="Go to page 3" href="#">3</a></li>
+    <li class="pager-item"><a title="Go to page 4" href="#">4</a></li>
+    <li class="pager-item"><a title="Go to page 5" href="#">5</a></li>
+    <li class="pager-item"><a title="Go to page 6" href="#">6</a></li>
+    <li class="pager-ellipsis">…</li>
+    <li class="pager-next"><a href="#">next</a></li>
+    <li class="pager-last last"><a href="#">last</a></li>
+  </ul>
+</div>
 
-
-<pre><code>&lt;i&gt;...&lt;/i&gt;</code></pre>
+<pre><code>&lt;div class=&quot;item-list&quot;&gt;
+  &lt;ul class=&quot;pager&quot;&gt;
+    &lt;li class=&quot;pager-first first&quot;&gt;&lt;a href=&quot;#&quot;&gt;first&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pager-previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;previous&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pager-item&quot;&gt;&lt;a title=&quot;Go to page 1&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pager-current&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/li&gt;
+    &lt;li class=&quot;pager-item&quot;&gt;&lt;a title=&quot;Go to page 3&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pager-ellipsis&quot;&gt;…&lt;/li&gt;
+    &lt;li class=&quot;pager-next&quot;&gt;&lt;a href=&quot;#&quot;&gt;next&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pager-last last&quot;&gt;&lt;a href=&quot;#&quot;&gt;last&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
 
 </div>
 

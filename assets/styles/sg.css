@@ -1,5 +1,299 @@
-/* line 1, ../../src/styles/sg.scss */
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
 
-body {
-  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  line {
+    font-family: \000034;
+  }
+}
+
+#sg-menu-container {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: -240px;
+  width: 240px;
+  height: 100%;
+  background: #454545;
+  font-family: sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000320;
+  }
+}
+
+#sg-menu-container.is-open {
+  right: 0px;
+}
+
+@media screen and (max-height: 26.375em) {
+@media -sass-debug-info {
+    filename {
+      font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+    }
+
+    line {
+      font-family: \0000326;
+    }
+}
+
+  #sg-menu-container {
+    right: -190px;
+    width: 190px;
+    font-size: 90%;
+  }
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000334;
+  }
+}
+
+#sg-menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 100%;
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000347;
+  }
+}
+
+.sg-menu {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000353;
+  }
+}
+
+.sg-menu-label {
+  color: #fafafa;
+  font-size: 1.2em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #333;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000362;
+  }
+}
+
+.sg-menu-list {
+  padding: 0;
+  margin: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000367;
+  }
+}
+
+.sg-menu-item {
+  display: block;
+  margin: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000372;
+  }
+}
+
+.sg-menu-link {
+  display: block;
+  padding: 1em 20px;
+  border-bottom: 1px solid #3c3c3c;
+  color: #fff;
+  font-size: .875em;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000381;
+  }
+}
+
+.sg-menu-link:hover {
+  background: #777;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
+  }
+
+  line {
+    font-family: \0000385;
+  }
+}
+
+.sg-menu-link:active {
+  background: #afafaf;
+  color: #47a3da;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \000033;
+  }
+}
+
+.sg-constrain {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \000038;
+  }
+}
+
+.sg-footer {
+  font-size: .825em;
+  text-align: center;
+  clear: both;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000313;
+  }
+}
+
+.sg-footer address {
+  display: inline;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000322;
+  }
+}
+
+.sg-color {
+  display: inline-block;
+  width: 120px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000327;
+  }
+}
+
+.sg-color-info {
+  font-size: .75em;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000336;
+  }
+}
+
+[sg-layout-container] {
+  clear: both;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: rgba(0, 0, 0, 0.2) solid 1px;
+  min-height: 200px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000345;
+  }
+}
+
+[sg-layout-item] {
+  background-color: rgba(0, 0, 255, 0.1);
+  outline: rgba(0, 0, 0, 0.2) solid 1px;
+  min-height: 200px;
 }

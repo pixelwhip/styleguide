@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Italic | Client Name</title>
+    <title>Triptych | Client Name</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -150,13 +150,29 @@
 
     <div class="sg-main sg-constrain">
       
-<h1 class="styleguide-title">Italic</h1>
-<p class="styleguide-description">The <code>&lt;i&gt;</code> tag is used to italicize text, such as movie titles, as well as to denote words that should be read in an alternate voice such as transliterated foreign words.</p>
+<h1 class="styleguide-title">Triptych</h1>
+<p class="styleguide-description">Three columns with 2 equal width outer columns and one wider center column.</p>
 <div class="styleguide-item article-body">
-<p>It was a great <i>Cinco de Mayo</i> celebration!</p>
+<div class="l--triptych" sg-layout-container>
+  <div class="l-primary" sg-layout-item>Primary</div>
+</div>
 
+<div class="l--triptych" sg-layout-container>
+  <div class="l-primary" sg-layout-item>Primary</div>
+  <div class="l-secondary" sg-layout-item>Secondary</div>
+</div>
 
-<pre><code>&lt;i&gt;...&lt;/i&gt;</code></pre>
+<div class="l--triptych" sg-layout-container>
+  <div class="l-primary" sg-layout-item>Primary</div>
+  <div class="l-secondary" sg-layout-item>Secondary</div>
+  <div class="l-tertiary" sg-layout-item>Tertiary</div>
+</div>
+
+<pre><code>&lt;div class=&quot;l--triptych&quot;&gt;
+  &lt;div class=&quot;l-primary&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;l-secondary&quot;&gt;...&lt;/div&gt;
+  &lt;div class=&quot;l-tertiary&quot;&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 </div>
 
