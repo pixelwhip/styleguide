@@ -6,6 +6,20 @@
 // dimensional values should have their initial context set in px to avoid
 // unintended size changes.
 
+//
+// Settings
+//
+
+$clr-body: #333;
+$clr-label: #999;
+$clr-border: #ddd;
+
+$ff-body: sans-serif;
+
+//
+// Partials
+//
+
 @import "partials/sg-menu";
 
 //
@@ -13,8 +27,8 @@
 //
 
 %sg-type-base {
-  color: #333;
-  font-family: sans-serif;
+  color: $clr-body;
+  font-family: $ff-body;
 
   a {
     color: #666;
@@ -73,14 +87,21 @@
 
 .sg-item-header {
   margin-bottom: 42px;
-  border-bottom: #ccc 1px solid;
+  border-bottom: $clr-border 1px solid;
 }
 
 .sg-title {
   @extend %sg-type-base;
   letter-spacing: -.03em;
-  font-size: 30px;
+  font-size: 36px;
   margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.sg-subhead {
+  @extend %sg-type-base;
+  letter-spacing: -.03em;
+  font-size: 24px;
   margin-bottom: 12px;
 }
 
@@ -94,7 +115,36 @@
   font-size: 14px;
   margin-bottom: 42px;
   text-transform: uppercase;
-  color: #999;
+  color: $clr-label;
+}
+
+//
+// Usage
+//
+
+.sg-usage--compact {
+  font-size: 12px;
+
+  > dt,
+  > dd {
+    display: inline;
+  }
+
+  > dt {
+    @extend .sg-label;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 6px;
+
+    &:after {
+      content: ":";
+    }
+  }
+
+  > dd {
+    margin-right: 24px;
+    margin-left: 0;
+  }
 }
 
 //
@@ -108,6 +158,32 @@
 
 .sg-color-info {
   font-size: .75em;
+}
+
+//
+// fonts
+//
+
+.sg-font {
+  margin-bottom: 60px;
+}
+
+.sg-font-size {
+  @extend %sg-type-base;
+  float: left;
+  padding-top: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: $clr-label;
+  width: 60px;
+}
+
+.sg-font-sample {
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-bottom: 36px;
+  border-top: 1px solid $clr-border;
+  margin-left: 0;
 }
 
 //
