@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Color Palette | Client Name</title>
+    <title>Colors | Client Name</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -23,12 +23,25 @@
   </head>
   <body>
     <header class="sg-masthead sg-constrain">
-      <h1>Style Guide<small> <a href="/">Client Name </a></small></h1>
+      <h1 class="sg-site-title">Style Guide: <small class="sg-site-client"> <a href="/">Client Name </a></small></h1>
     </header>
     
 <div id="sg-menu-container" class="is-open">
   <nav class="sg-menu sg-menu-vertical sg-menu-left sg-menu-open">
     <button id="sg-menu-toggle" class="is-active">Menu</button>
+    
+    <h3 class="sg-menu-label">brand</h3>
+    <ul class="sg-menu-list">
+      
+        <li class="sg-menu-list-item">
+          <a href="color.html" class="sg-menu-link">Colors</a>
+        </li>
+      
+        <li class="sg-menu-list-item">
+          <a href="fonts.html" class="sg-menu-link">Fonts</a>
+        </li>
+      
+    </ul>
     
     <h3 class="sg-menu-label">component</h3>
     <ul class="sg-menu-list">
@@ -63,7 +76,7 @@
         </li>
       
         <li class="sg-menu-list-item">
-          <a href="color.html" class="sg-menu-link">Color Palette</a>
+          <a href="button.html" class="sg-menu-link">Button</a>
         </li>
       
         <li class="sg-menu-list-item">
@@ -150,9 +163,12 @@
 
     <div class="sg-main sg-constrain">
       
-<h1 class="styleguide-title">Color Palette</h1>
-<p class="styleguide-description"></p>
-<div class="styleguide-item article-body">
+<header class="sg-item-header">
+  <h1 class="sg-title">Colors</h1>
+  <p class="sg-description"></p>
+</header>
+<div class="sg-item">
+  <h3 class="sg-label">Example</h3>
 <div class="sg-color-group">
   <h2 class="sg-color-group-title">Neutral</h2>
 
@@ -357,6 +373,10 @@
   
     
   
+    
+  
+    
+  
 
 
 
@@ -375,6 +395,7 @@
     <script src="assets/scripts/highlight.js"></script>
     <script src="assets/scripts/classie.js"></script>
     <script src="assets/scripts/sg-menu.js"></script>
+    <script src="assets/scripts/previews.js"></script>
     <script src="assets/scripts/main.js"></script>
     <!-- endbuild -->
   </body>

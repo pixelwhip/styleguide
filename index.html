@@ -23,12 +23,25 @@
   </head>
   <body>
     <header class="sg-masthead sg-constrain">
-      <h1>Style Guide<small> <a href="/">Client Name </a></small></h1>
+      <h1 class="sg-site-title">Style Guide: <small class="sg-site-client"> <a href="/">Client Name </a></small></h1>
     </header>
     
 <div id="sg-menu-container" class="is-open">
   <nav class="sg-menu sg-menu-vertical sg-menu-left sg-menu-open">
     <button id="sg-menu-toggle" class="is-active">Menu</button>
+    
+    <h3 class="sg-menu-label">brand</h3>
+    <ul class="sg-menu-list">
+      
+        <li class="sg-menu-list-item">
+          <a href="color.html" class="sg-menu-link">Colors</a>
+        </li>
+      
+        <li class="sg-menu-list-item">
+          <a href="fonts.html" class="sg-menu-link">Fonts</a>
+        </li>
+      
+    </ul>
     
     <h3 class="sg-menu-label">component</h3>
     <ul class="sg-menu-list">
@@ -63,7 +76,7 @@
         </li>
       
         <li class="sg-menu-list-item">
-          <a href="color.html" class="sg-menu-link">Color Palette</a>
+          <a href="button.html" class="sg-menu-link">Button</a>
         </li>
       
         <li class="sg-menu-list-item">
@@ -150,6 +163,51 @@
 
     <div class="sg-main sg-constrain">
       
+
+  
+    
+<h4 class="styleguide-title">Colors</h4>
+<p class="styleguide-description"></p>
+<div class="styleguide-item article-body">
+<p>{{#colors}}</p>
+<p><div class="sg-color-group">
+  <h2 class="sg-color-group-title">{{group}}</h2>
+  {{#color}}
+    {{&gt; swatch}}
+  {{/color}}
+</div>
+{{/colors}}</p>
+
+</div>
+
+  
+    
+<h4 class="styleguide-title">Fonts</h4>
+<p class="styleguide-description"></p>
+<div class="styleguide-item article-body">
+<p>{{#fonts}}</p>
+<p><div class="sg-font">
+  <header class="sg-font-header">
+    <h2 class="sg-font-title sg-subhead">{{family}}</h2>
+    <dl class="sg-usage--compact">
+      <dt>Stack</dt>
+      <dd><code>{{stack}}</code></dd>
+      <dt>Sass</dt>
+      <dd><code>{{sass}}</code></dd>
+    </dl>
+  </header>
+  <dl class="sg-font-samples" style="font-family: {{stack}};">
+  {{#sizes}}
+    <dt class="sg-font-size">{{this}}px</dt>
+    <dd class="sg-font-sample" style="font-size: {{this}}px;">The quick brown fox jumps over the lazy dog.</dd>
+  {{/sizes}}
+  </dl>
+</div>
+{{/fonts}}</p>
+
+</div>
+
+  
 
   
     
@@ -297,17 +355,14 @@ With Citation
 
   
     
-<h4 class="styleguide-title">Color Palette</h4>
-<p class="styleguide-description"></p>
+<h4 class="styleguide-title">Button</h4>
+<p class="styleguide-description">The <code>&lt;button&gt;</code> tag is used to provide interaction with the site.  Buttons should be chosen over links when the act of clicking alters the state of the application rather than just navigating to another document or fragment.</p>
 <div class="styleguide-item article-body">
-<p>{{#colors}}</p>
-<p><div class="sg-color-group">
-  <h2 class="sg-color-group-title">{{group}}</h2>
-  {{#color}}
-    {{&gt; swatch}}
-  {{/color}}
-</div>
-{{/colors}}</p>
+<button>Button</button>
+<button class=":hover">Button</button>
+<button class=":active">Button</button>
+
+<pre><code>&lt;button&gt;Button&lt;/button&gt;</code></pre>
 
 </div>
 
@@ -398,7 +453,7 @@ With Citation
 <h4 class="styleguide-title">Link</h4>
 <p class="styleguide-description">Links provide users a way to navigate from one page to another and are created with the <code>&lt;a&gt;</code> tag.</p>
 <div class="styleguide-item article-body">
-<p>This is a <a href="#">inline link</a>.</p>
+<p>This is an <a href="#">inline link</a>.  You can <a href="#" class=":hover">hover on it</a>.  Click on it to <a href="#" class=":active">make it active</a>. Or maybe your <a href="#" class=":visited">visited last week</a>.  You&#39;re so cool.</p>
 
 
 <pre><code>&lt;a href=&quot;http://...&quot;&gt;...&lt;/a&gt;</code></pre>
@@ -681,6 +736,7 @@ With Citation
     <script src="assets/scripts/highlight.js"></script>
     <script src="assets/scripts/classie.js"></script>
     <script src="assets/scripts/sg-menu.js"></script>
+    <script src="assets/scripts/previews.js"></script>
     <script src="assets/scripts/main.js"></script>
     <!-- endbuild -->
   </body>

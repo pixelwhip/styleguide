@@ -23,12 +23,25 @@
   </head>
   <body>
     <header class="sg-masthead sg-constrain">
-      <h1>Style Guide<small> <a href="/">Client Name </a></small></h1>
+      <h1 class="sg-site-title">Style Guide: <small class="sg-site-client"> <a href="/">Client Name </a></small></h1>
     </header>
     
 <div id="sg-menu-container" class="is-open">
   <nav class="sg-menu sg-menu-vertical sg-menu-left sg-menu-open">
     <button id="sg-menu-toggle" class="is-active">Menu</button>
+    
+    <h3 class="sg-menu-label">brand</h3>
+    <ul class="sg-menu-list">
+      
+        <li class="sg-menu-list-item">
+          <a href="color.html" class="sg-menu-link">Colors</a>
+        </li>
+      
+        <li class="sg-menu-list-item">
+          <a href="fonts.html" class="sg-menu-link">Fonts</a>
+        </li>
+      
+    </ul>
     
     <h3 class="sg-menu-label">component</h3>
     <ul class="sg-menu-list">
@@ -63,7 +76,7 @@
         </li>
       
         <li class="sg-menu-list-item">
-          <a href="color.html" class="sg-menu-link">Color Palette</a>
+          <a href="button.html" class="sg-menu-link">Button</a>
         </li>
       
         <li class="sg-menu-list-item">
@@ -150,9 +163,12 @@
 
     <div class="sg-main sg-constrain">
       
-<h1 class="styleguide-title">Italic</h1>
-<p class="styleguide-description">The <code>&lt;i&gt;</code> tag is used to italicize text, such as movie titles, as well as to denote words that should be read in an alternate voice such as transliterated foreign words.</p>
-<div class="styleguide-item article-body">
+<header class="sg-item-header">
+  <h1 class="sg-title">Italic</h1>
+  <p class="sg-description">The <code>&lt;i&gt;</code> tag is used to italicize text, such as movie titles, as well as to denote words that should be read in an alternate voice such as transliterated foreign words.</p>
+</header>
+<div class="sg-item">
+  <h3 class="sg-label">Example</h3>
 <p>It was a great <i>Cinco de Mayo</i> celebration!</p>
 
 
@@ -164,6 +180,10 @@
 
 
 
+  
+    
+  
+    
   
     
   
@@ -239,6 +259,7 @@
     <script src="assets/scripts/highlight.js"></script>
     <script src="assets/scripts/classie.js"></script>
     <script src="assets/scripts/sg-menu.js"></script>
+    <script src="assets/scripts/previews.js"></script>
     <script src="assets/scripts/main.js"></script>
     <!-- endbuild -->
   </body>

@@ -195,7 +195,71 @@
   }
 
   line {
-    font-family: \000033;
+    font-family: \0000329;
+  }
+}
+
+.sg-masthead,
+.sg-footer,
+.sg-title,
+.sg-subhead,
+.sg-description,
+.sg-label,
+.sg-usage--compact > dt,
+.sg-font-size {
+  color: #333333;
+  font-family: sans-serif;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000333;
+  }
+}
+
+.sg-masthead a,
+.sg-footer a,
+.sg-title a,
+.sg-subhead a,
+.sg-description a,
+.sg-label a,
+.sg-usage--compact > dt a,
+.sg-font-size a {
+  color: #666;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000336;
+  }
+}
+
+.sg-masthead a:hover,
+.sg-footer a:hover,
+.sg-title a:hover,
+.sg-subhead a:hover,
+.sg-description a:hover,
+.sg-label a:hover,
+.sg-usage--compact > dt a:hover,
+.sg-font-size a:hover {
+  color: #444;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000346;
   }
 }
 
@@ -210,13 +274,56 @@
   }
 
   line {
-    font-family: \000038;
+    font-family: \0000355;
+  }
+}
+
+.sg-masthead {
+  padding: 6px 20px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000360;
+  }
+}
+
+.sg-site-title {
+  font-size: 14px;
+  margin: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000365;
+  }
+}
+
+.sg-site-client {
+  font-size: 1em;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000373;
   }
 }
 
 .sg-footer {
-  font-size: .825em;
-  text-align: center;
+  padding: 20px;
+  font-size: 12px;
   clear: both;
 }
 
@@ -226,7 +333,7 @@
   }
 
   line {
-    font-family: \0000313;
+    font-family: \0000379;
   }
 }
 
@@ -240,7 +347,161 @@
   }
 
   line {
-    font-family: \0000322;
+    font-family: \0000388;
+  }
+}
+
+.sg-item-header {
+  margin-bottom: 42px;
+  border-bottom: #dddddd 1px solid;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \0000393;
+  }
+}
+
+.sg-title {
+  letter-spacing: -.03em;
+  font-size: 36px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003101;
+  }
+}
+
+.sg-subhead {
+  letter-spacing: -.03em;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003108;
+  }
+}
+
+.sg-description {
+  font-size: 15px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003113;
+  }
+}
+
+.sg-label,
+.sg-usage--compact > dt {
+  font-size: 14px;
+  margin-bottom: 42px;
+  text-transform: uppercase;
+  color: #999999;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003125;
+  }
+}
+
+.sg-usage--compact {
+  font-size: 12px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003129;
+  }
+}
+
+.sg-usage--compact > dt,
+.sg-usage--compact > dd {
+  display: inline;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003133;
+  }
+}
+
+.sg-usage--compact > dt {
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003139;
+  }
+}
+
+.sg-usage--compact > dt:after {
+  content: ":";
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003144;
+  }
+}
+
+.sg-usage--compact > dd {
+  margin-right: 24px;
+  margin-left: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003154;
   }
 }
 
@@ -255,7 +516,7 @@
   }
 
   line {
-    font-family: \0000327;
+    font-family: \00003159;
   }
 }
 
@@ -269,7 +530,58 @@
   }
 
   line {
-    font-family: \0000336;
+    font-family: \00003167;
+  }
+}
+
+.sg-font {
+  margin-bottom: 60px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003171;
+  }
+}
+
+.sg-font-size {
+  float: left;
+  padding-top: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #999999;
+  width: 60px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003181;
+  }
+}
+
+.sg-font-sample {
+  padding-top: 12px;
+  padding-left: 60px;
+  margin-bottom: 36px;
+  border-top: 1px solid #dddddd;
+  margin-left: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003194;
   }
 }
 
@@ -288,7 +600,7 @@
   }
 
   line {
-    font-family: \0000345;
+    font-family: \00003203;
   }
 }
 
