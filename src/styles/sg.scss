@@ -1,18 +1,100 @@
+//
+// Styleguide specific styles.
+//
+// It's recommended that all selectors be prefixed with 'sg-' to prevent
+// namespace collisions with project related styles.  For the same reason, all
+// dimensional values should have their initial context set in px to avoid
+// unintended size changes.
+
 @import "partials/sg-menu";
+
+//
+// Extends
+//
+
+%sg-type-base {
+  color: #333;
+  font-family: sans-serif;
+
+  a {
+    color: #666;
+
+    &:hover {
+      color: #444;
+    }
+  }
+}
+
+//
+// Layout
+//
 
 .sg-constrain {
   max-width: 1024px;
   margin: 0 auto;
 }
 
+//
+// Masthead
+//
+
+.sg-masthead {
+  @extend %sg-type-base;
+  padding: 6px 20px;
+}
+
+.sg-site-title {
+  font-size: 14px;
+  margin: 0;
+}
+
+.sg-site-client {
+  font-size: 1em;
+}
+
+//
+// Footer
+//
+
 .sg-footer {
-  font-size: .825em;
-  text-align: center;
+  @extend %sg-type-base;
+  padding: 20px;
+  font-size: 12px;
   clear: both;
 
   address {
     display: inline;
   }
+}
+
+//
+// Items
+//
+
+.sg-item-header {
+  margin-bottom: 42px;
+  border-bottom: #ccc 1px solid;
+}
+
+.sg-title {
+  @extend %sg-type-base;
+  letter-spacing: -.03em;
+  font-size: 30px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.sg-description {
+  @extend %sg-type-base;
+  font-size: 15px;
+}
+
+.sg-label {
+  @extend %sg-type-base;
+  font-size: 14px;
+  margin-bottom: 42px;
+  text-transform: uppercase;
+  color: #999;
 }
 
 //
