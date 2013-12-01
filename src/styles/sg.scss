@@ -100,7 +100,6 @@ $ff-body: sans-serif;
 
 .sg-subhead {
   @extend %sg-type-base;
-  letter-spacing: -.03em;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -153,11 +152,33 @@ $ff-body: sans-serif;
 
 .sg-color {
   display: inline-block;
-  width: 120px;
+  width: 140px;
+  margin-right: 18px;
+  margin-bottom: 18px;
+}
+
+.sg-color-swatch {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
 }
 
 .sg-color-info {
-  font-size: .75em;
+  @extend %sg-type-base;
+  font-size: 12px;
+}
+
+.sg-color-label {
+  float: left;
+  clear: left;
+  color: $clr-label;
+  text-transform: uppercase;
+  width: 3.25em;
+}
+
+.sg-color-def {
+  float: left;
+  margin: 0;
 }
 
 //
