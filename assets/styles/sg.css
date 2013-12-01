@@ -102,12 +102,14 @@
 }
 
 .sg-menu-label {
-  color: #fafafa;
-  font-size: 1.2em;
+  color: #ddd;
+  font-size: 14px;
   padding: 20px;
   margin: 0;
   font-weight: 300;
   background: #333;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 @media -sass-debug-info {
@@ -116,7 +118,7 @@
   }
 
   line {
-    font-family: \0000362;
+    font-family: \0000364;
   }
 }
 
@@ -131,7 +133,7 @@
   }
 
   line {
-    font-family: \0000367;
+    font-family: \0000369;
   }
 }
 
@@ -146,7 +148,7 @@
   }
 
   line {
-    font-family: \0000372;
+    font-family: \0000374;
   }
 }
 
@@ -166,7 +168,7 @@
   }
 
   line {
-    font-family: \0000381;
+    font-family: \0000383;
   }
 }
 
@@ -180,7 +182,7 @@
   }
 
   line {
-    font-family: \0000385;
+    font-family: \0000387;
   }
 }
 
@@ -206,6 +208,7 @@
 .sg-description,
 .sg-label,
 .sg-usage--compact > dt,
+.sg-color-info,
 .sg-font-size {
   color: #333333;
   font-family: sans-serif;
@@ -228,6 +231,7 @@
 .sg-description a,
 .sg-label a,
 .sg-usage--compact > dt a,
+.sg-color-info a,
 .sg-font-size a {
   color: #666;
 }
@@ -249,6 +253,7 @@
 .sg-description a:hover,
 .sg-label a:hover,
 .sg-usage--compact > dt a:hover,
+.sg-color-info a:hover,
 .sg-font-size a:hover {
   color: #444;
 }
@@ -384,7 +389,6 @@
 }
 
 .sg-subhead {
-  letter-spacing: -.03em;
   font-size: 24px;
   margin-bottom: 12px;
 }
@@ -395,7 +399,7 @@
   }
 
   line {
-    font-family: \00003108;
+    font-family: \00003107;
   }
 }
 
@@ -409,7 +413,7 @@
   }
 
   line {
-    font-family: \00003113;
+    font-family: \00003112;
   }
 }
 
@@ -427,7 +431,7 @@
   }
 
   line {
-    font-family: \00003125;
+    font-family: \00003124;
   }
 }
 
@@ -441,7 +445,7 @@
   }
 
   line {
-    font-family: \00003129;
+    font-family: \00003128;
   }
 }
 
@@ -456,7 +460,7 @@
   }
 
   line {
-    font-family: \00003133;
+    font-family: \00003132;
   }
 }
 
@@ -472,7 +476,7 @@
   }
 
   line {
-    font-family: \00003139;
+    font-family: \00003138;
   }
 }
 
@@ -486,7 +490,7 @@
   }
 
   line {
-    font-family: \00003144;
+    font-family: \00003143;
   }
 }
 
@@ -501,13 +505,15 @@
   }
 
   line {
-    font-family: \00003154;
+    font-family: \00003153;
   }
 }
 
 .sg-color {
   display: inline-block;
-  width: 120px;
+  width: 140px;
+  margin-right: 18px;
+  margin-bottom: 18px;
 }
 
 @media -sass-debug-info {
@@ -516,12 +522,28 @@
   }
 
   line {
-    font-family: \00003159;
+    font-family: \00003160;
+  }
+}
+
+.sg-color-swatch {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003166;
   }
 }
 
 .sg-color-info {
-  font-size: .75em;
+  font-size: 12px;
 }
 
 @media -sass-debug-info {
@@ -530,7 +552,40 @@
   }
 
   line {
-    font-family: \00003167;
+    font-family: \00003171;
+  }
+}
+
+.sg-color-label {
+  float: left;
+  clear: left;
+  color: #999999;
+  text-transform: uppercase;
+  width: 3.25em;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003179;
+  }
+}
+
+.sg-color-def {
+  float: left;
+  margin: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  }
+
+  line {
+    font-family: \00003188;
   }
 }
 
@@ -544,7 +599,7 @@
   }
 
   line {
-    font-family: \00003171;
+    font-family: \00003192;
   }
 }
 
@@ -563,7 +618,7 @@
   }
 
   line {
-    font-family: \00003181;
+    font-family: \00003202;
   }
 }
 
@@ -581,7 +636,7 @@
   }
 
   line {
-    font-family: \00003194;
+    font-family: \00003215;
   }
 }
 
@@ -600,7 +655,7 @@
   }
 
   line {
-    font-family: \00003203;
+    font-family: \00003224;
   }
 }
 
