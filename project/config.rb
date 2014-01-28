@@ -1,6 +1,5 @@
 # Compass plugins
 require 'breakpoint'
-require 'zen-grids'
 require 'sass-globbing'
 
 http_path = "/"

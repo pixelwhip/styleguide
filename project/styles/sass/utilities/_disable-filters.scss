@@ -1,8 +1,0 @@
-//
-// @file
-// Removes gradient from ie.
-// ---------------------------------------------------------------------------
-@mixin dis-gradient {
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-}
