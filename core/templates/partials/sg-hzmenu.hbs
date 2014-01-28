@@ -1,0 +1,23 @@
+---
+component: sg-menu
+---
+<nav id="sg-hzmenu" class="sg-hzmenu">
+  <ul>
+    {{#each tags}}
+    <li>
+      <a href="#">{{tag}}</a>
+      <div class="sg-hzsub">
+        <div class="sg-hzsub-inner">
+          <div>
+            <ul>
+              {{#each pages}}
+              <li><a href="{{basename}}.html" class="sg-hzmenu-link">{{data.title}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+        </div><!-- /sg-hzsub-inner -->
+      </div><!-- /sg-hzsub -->
+    </li>
+    {{/each}}
+  </ul>
+</nav>

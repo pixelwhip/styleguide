@@ -1,0 +1,53 @@
+---
+layout: item.hbs
+title: Colors
+tags: brand
+colors:
+- group: Neutral
+  color:
+  - sass: $gray-white
+    hex: '#f4f4f4'
+  - sass: $gray-lightest
+    hex: '#f4f4f4'
+  - sass: $gray-lighter
+    hex: '#e5e5e5'
+  - sass: $gray-light
+    hex: '#c1c1c1'
+  - sass: $gray
+    hex: '#959595'
+  - sass: $gray-dark
+    hex: '#595959'
+  - sass: $gray-darker
+    hex: '#2e2d29'
+- group: Reds
+  color:
+  - sass: $red-light
+    hex: '#ad0000'
+  - sass: $red
+    hex: '#8c1515'
+- group: Blue
+  color:
+  - sass: $blue-lighter
+    hex: '#a6e4ff'
+  - sass: $blue-light
+    hex: '#0098db'
+  - sass: $blue
+    hex: '#006c9c'
+  - sass: $blue-dark
+    hex: '#0062a5'
+  - sass: $blue-darker
+    hex: '#004361'
+- group: Sand
+  color:
+  - sass: $sand
+    hex: '#cc9966'
+
+---
+{{#colors}}
+<div class="sg-color-group">
+  <h2 class="sg-color-group-title sg-subhead">{{group}}</h2>
+  {{#color}}
+    {{> swatch}}
+  {{/color}}
+</div>
+{{/colors}}

@@ -1,0 +1,20 @@
+// View Mode - Expanded Listing
+// ----------
+.node-profile.view-mode-listing_simple {
+  .field-name-field-first-name,
+  .field-name-field-last-name,
+  .field-name-field-persons-title {
+    display: inline;
+  }
+
+  .field-name-field-first-name,
+  .field-name-field-last-name {
+    margin-right: .25em;
+    color: $blue-light;
+    font-weight: 600;
+  }
+
+  .field-name-field-persons-title {
+    font-style: italic;
+  }
+}

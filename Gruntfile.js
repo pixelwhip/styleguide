@@ -6,20 +6,13 @@ var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
-
 module.exports = function (grunt) {
   // show elapsed time at the end
   require('time-grunt')(grunt);
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
-  // Uncomment the following to include environment specific settings in config.js
-  // require('./config');
-
+  // Include project specific configuration. See project.js
+  var project = require('./project');
   // Allow configuration to be distributed across files.
   function loadConfig(path) {
     var glob = require('glob');
@@ -36,35 +29,69 @@ module.exports = function (grunt) {
 
   // configurable paths
   var yeomanConfig = {
-    app: 'src',
+    core: 'core',
     dist: 'dist',
+    project: 'project',
     tmp: '.tmp'
   };
 
   var config = {
     yeoman: yeomanConfig,
     pkg: grunt.file.readJSON('package.json'),
-    sg: grunt.file.readJSON('styleguide.json'),
     env: process.env,
     watch: {
-      compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
+      compass_core: {
+        files: ['<%= yeoman.core %>/styles/sass/{,*/}*.{scss,sass}'],
+        tasks: ['compass:core']
       },
-      scripts: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['copy:scripts']
+      compass_project: {
+        files: ['<%= yeoman.project %>/styles/sass/{,*/}*.{scss,sass}'],
+        tasks: ['compass:project']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['copy:styles', 'autoprefixer']
+        files: ['<%= yeoman.tmp %>/assets/styles/**/*.css'],
+        tasks: ['autoprefixer']
+      },
+      styles_core: {
+        files: ['<%= yeoman.core %>/styles/{,*/}*.css'],
+        tasks: ['copy:styles_core']
+      },
+      styles_project: {
+        files: ['<%= yeoman.project %>/styles/**/*.css'],
+        tasks: ['copy:styles_project']
+      },
+      scripts: {
+        files: ['<%= yeoman.tmp %>/scripts/{,*/}*.js'],
+        tasks: ['copy:scripts']
+      },
+      scripts_core: {
+        files: ['<%= yeoman.core %>/scripts/{,*/}*.js'],
+        tasks: ['copy:scripts_core']
+      },
+      scripts_project: {
+        files: ['<%= yeoman.project %>/scripts/{,*/}*.js'],
+        tasks: ['copy:scripts_project']
+      },
+      copy_core: {
+        files: [
+          '<%= yeoman.core %>/**/*.{hbs,json,yml,md}',
+          '<%= yeoman.core %>/helpers/**/*.js'
+        ],
+        tasks: ['copy:core', 'copy:project']
+      },
+      copy_project: {
+        files: [
+          '<%= yeoman.project %>/**/*.{hbs,json,yml,md}',
+          '<%= yeoman.project %>/helpers/**/*.js'
+        ],
+        tasks: ['copy:project']
       },
       assemble: {
         files: [
-          '<%= yeoman.app %>/**/*.{hbs,json,yml,md}',
-          '<%= yeoman.app %>/helpers/**/*.js'
+          '<%= yeoman.tmp %>/**/*.{hbs,json,yml,md}',
+          '<%= yeoman.tmp %>/helpers/**/*.js'
         ],
-        tasks: ['assemble']
+        tasks: ['injector', 'assemble']
       },
       livereload: {
         options: {
@@ -90,18 +117,7 @@ module.exports = function (grunt) {
             return [
               lrSnippet,
               mountFolder(connect, 'dist'),
-              mountFolder(connect, yeomanConfig.app)
-            ];
-          }
-        }
-      },
-      test: {
-        options: {
-          middleware: function (connect) {
-            return [
-              mountFolder(connect, 'dist'),
-              mountFolder(connect, 'test'),
-              mountFolder(connect, yeomanConfig.app)
+              mountFolder(connect, yeomanConfig.core)
             ];
           }
         }
@@ -117,22 +133,24 @@ module.exports = function (grunt) {
       }
     },
     concurrent: {
-      server: [
-        'compass',
-        'copy:styles',
-        'copy:scripts',
-        'copy:bower'
+      core: [
+        'compass:core',
+        'copy:styles_core',
+        'copy:scripts_core',
+        'copy:core'
       ],
-      test: [
-        'copy:styles',
-        'copy:scripts',
-        'copy:bower'
+      project: [
+        'compass:project',
+        'copy:styles_project',
+        'copy:scripts_project',
+        'copy:project'
+      ],
+      server: [
+        'autoprefixer',
+        'injector',
+        'copy:scripts'
       ],
       dist: [
-        'compass',
-        'copy:styles',
-        'copy:scripts',
-        'copy:bower',
         'imagemin',
         'svgmin',
         'htmlmin'
@@ -144,7 +162,6 @@ module.exports = function (grunt) {
   grunt.util._.extend(config, loadConfig('./tasks/options/'));
 
   grunt.loadTasks('tasks'); // Loads tasks in `tasks/` folder
-
   grunt.initConfig(config);
 
   grunt.registerTask('server', function (target) {
@@ -154,8 +171,9 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'concurrent:core',
+      'concurrent:project',
       'concurrent:server',
-      'autoprefixer',
       'connect:livereload',
       'assemble',
       'open',
@@ -163,28 +181,37 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('test', [
-    'clean:server',
-    'concurrent:test',
-    'autoprefixer',
-    'assemble',
-    'connect:test'
-  ]);
-
   grunt.registerTask('build', [
     'clean:dist',
+    'concurrent:core',
+    'concurrent:project',
+    'concurrent:server',
     'assemble',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
-    'modernizr',
     'rev',
     'usemin'
   ]);
 
+  grunt.registerTask('project_styles', [
+    'copy:project_styles',
+    'compass:project',
+  ]);
+
+  grunt.registerTask('core_styles', [
+    'copy:core_styles',
+    'compass:core',
+  ]);
+
+  grunt.registerTask('sg', [
+    'copy:core',
+    'copy:project',
+    'injector',
+    'assemble',
+  ]);
+
   grunt.registerTask('default', [
     'jshint',
-    'test',
     'build'
   ]);
 };

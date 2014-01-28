@@ -1,0 +1,62 @@
+// View Mode - Expanded Listing
+// ----------
+
+.view-mode-listing_expanded,
+.view-mode-teaser_expanded {
+  .field-name-title {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .field-name-field-event-date,
+  .field-name-field-location-name,
+  .field-name-field-location-address {
+    @include adjust-font-size-to($fs-s);
+  }
+
+  .field-name-field-event-date,
+  .field-name-field-location-address {
+    margin-bottom: rhythm(2, $fs-s);
+  }
+
+  .field-name-body {
+    margin-bottom: rhythm(2);
+  }
+
+  .field-name-node-link {
+    a {
+      @extend .link--more;
+    }
+  }
+}
+
+.field-name-field-event-date {
+  text-transform: uppercase;
+}
+
+.field-name-field-location-name {
+  font-weight: 600;
+  color: $gray-dark;
+}
+
+.view-mode-teaser_expanded {
+  @include zen-grid-container;
+  margin-left: -12px;
+  margin-right: -12px;
+
+  @include breakpoint(568px) {
+    .field-name-title,
+    .field-name-body {
+      @include zen-grid-item(7, 1, left);
+      @include zen-clear(left);
+    }
+
+    .field-name-field-event-date,
+    .field-name-field-location-name,
+    .field-name-field-location-address {
+      @include zen-grid-item(4, 1, right);
+      @include zen-clear(right);
+    }
+  }
+}

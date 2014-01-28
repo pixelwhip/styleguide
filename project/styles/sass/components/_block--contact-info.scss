@@ -1,0 +1,40 @@
+//
+// @file
+// Contact Info styles.
+// ----------------------------------------------------------------------------
+
+.block--contact-info {
+  color: $gray-light;
+  background-color: $gray-darker;
+  margin-bottom: rhythm(2);
+
+  > h2 {
+    color: $white;
+    text-transform: uppercase;
+    @include adjust-font-size-to($fs-s);
+    margin-bottom: 0;
+  }
+
+  .contact-label {
+    font-weight: 700;
+  }
+
+  .field-name-field-block-description {
+    @include adjust-font-size-to($fs-s);
+  }
+
+  .contact-place,
+  .contact-address {
+    display: block;
+
+    @include breakpoint(768px) {
+      display: inline;
+
+      &:after {
+        content: "|";
+        margin-left: .5em;
+        margin-right: .5em;
+      }
+    }
+  }
+}

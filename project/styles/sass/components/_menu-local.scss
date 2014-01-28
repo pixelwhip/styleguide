@@ -1,0 +1,91 @@
+// Local Menu
+// ----------
+
+#block-menu-block-1 {
+  h2 > a {
+    color: $red;
+
+    &:hover {
+      color: $red-light;
+    }
+  }
+
+  .menu {
+    @extend .no-bullets;
+
+    // 1st Level
+    > li {
+      margin: 0;
+      padding: 0;
+
+      > a {
+        display: block;
+        padding: rhythm(1.5) 18px;
+        color: $gray-dark;
+        border-bottom: 1px solid $gray-lightest;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $gray-white;
+          color: $gray-darker;
+        }
+
+        &.active,
+        &.active-trail {
+          background-color: $gray-lightest;
+        }
+      }
+
+      &:first-child {
+        > a {
+          border-top: 1px solid $gray-lightest;
+        }
+      }
+    }
+
+    // 2nd Level
+    ul {
+      padding: 0;
+      margin: 0;
+
+      > li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+
+        > a {
+          display: block;
+          padding: rhythm(1.5, $fs-s) 18px rhythm(1.5, $fs-s) 36px;
+          color: $gray-dark;
+          @include adjust-font-size-to($fs-s, 3, $fs-m);
+
+          &:hover {
+            background-color: $gray-white;
+            color: $gray-darker;
+            text-decoration: none;
+          }
+
+          &.active,
+          &.active-trail {
+            background-color: transparent;
+            color: $blue-light;
+          }
+        }
+      }
+    }
+
+    // 3rd Level
+    ul ul {
+      margin-bottom: rhythm(1);
+
+      > li {
+        > a {
+          color: $gray;
+          padding-left: 56px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

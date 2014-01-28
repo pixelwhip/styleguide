@@ -1,0 +1,177 @@
+// Main Menu
+// ----------
+
+#main-menu {
+  background-color: $red;
+
+  > .container {
+    @extend %container;
+    @extend %container--full-bleed;
+  }
+
+  .navbar,
+  .navbar-inner,
+  .btn-navbar {
+    @include dis-gradient;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  .navbar-inner {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .btn-navbar {
+    margin-left: 20px;
+    background-color: $red-lighter;
+    border-radius: 9;
+  }
+
+  .nav-collapse {
+    .nav > li {
+      border-right: 1px solid $red-lighter;
+
+      &:first-child {
+        border-left: 1px solid $red-lighter;
+      }
+
+      @include breakpoint(max-width 767px) {
+        border-bottom: 1px solid $red-lighter;
+        border-right: none;
+
+        > a {
+          margin-bottom: 0;
+        }
+
+        &:first-child {
+          border-top: 1px solid $red-lighter;
+          border-left: none;
+        }
+      }
+    }
+
+    .nav > li > a {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      color: $white;
+      text-shadow: none;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      border-width: 0 1px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: transparent;
+      margin-left: -1px;
+      margin-right: -1px;
+
+      &:hover,
+      &.active,
+      &.active-trail  {
+        background-color: $red-light;
+      }
+
+      &.active,
+      &.active-trail {
+        background-color: $red-lighter;
+        @include box-shadow($white 0 -6px 0 -3px inset);
+
+        @include breakpoint(max-width 767px) {
+          @include box-shadow($white 12px 0 0 -6px inset);
+        }
+      }
+    }
+
+    &.collapse {
+      border-width: 1px 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .dropdown {
+    .caret {
+      border: none;
+      margin: 0 8px;
+
+      &:after {
+        content: '\f106';
+        font-family: $ff-icon;
+        font-size: 14px;
+      }
+    }
+
+    &.open {
+      > .dropdown-toggle {
+        background-color: $red-lighter;
+        @include box-shadow($white 0 -6px 0 -3px inset);
+
+        .caret {
+          &:after {
+            content: '\f107';
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: -1px;
+    background-color: $red;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint(max-width 767px) {
+      margin: 0;
+    }
+
+    &:before,
+    &:after {
+      content: none;
+    }
+
+    li {
+      a {
+        color: $white;
+        box-shadow: none;
+        @include dis-gradient;
+        @include adjust-font-size-to($fs-s);
+        padding-top: rhythm(.75, $fs-s);
+        padding-bottom: rhythm(.75, $fs-s);
+
+        &:hover {
+          background-color: $red-light;
+        }
+      }
+
+      &.active > a {
+        background-color: $red;
+        @include dis-gradient;
+      }
+    }
+  }
+}
+
+#main-nav {
+  @include breakpoint(768px) {
+    display: table;
+    width: 100%;
+
+    > .nav {
+      display: table-row;
+      float: none;
+
+      > li {
+        display: table-cell;
+        float: none;
+      }
+    }
+  }
+}

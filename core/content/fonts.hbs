@@ -1,0 +1,38 @@
+---
+layout: item.hbs
+title: Fonts
+tags: brand
+fonts:
+- family: Source Sans Pro
+  stack: "'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  sass: '$ff-sans'
+  sizes:
+  - 60
+  - 42
+  - 30
+  - 26
+  - 24
+  - 20
+  - 18
+  - 16
+  - 13
+---
+{{#fonts}}
+<div class="sg-font">
+  <header class="sg-font-header">
+    <h2 class="sg-font-title sg-subhead">{{family}}</h2>
+    <dl class="sg-usage--compact">
+      <dt>Stack</dt>
+      <dd><code>{{stack}}</code></dd>
+      <dt>Sass</dt>
+      <dd><code>{{sass}}</code></dd>
+    </dl>
+  </header>
+  <dl class="sg-font-samples" style="font-family: {{stack}};">
+  {{#sizes}}
+    <dt class="sg-font-size">{{this}}px</dt>
+    <dd class="sg-font-sample" style="font-size: {{this}}px;">The quick brown fox jumps over the lazy dog.</dd>
+  {{/sizes}}
+  </dl>
+</div>
+{{/fonts}}

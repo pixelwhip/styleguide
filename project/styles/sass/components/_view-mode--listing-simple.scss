@@ -1,0 +1,21 @@
+// View Mode - Spotlight
+// ----------
+
+.view-mode-listing_simple {
+  .field-name-field-event-date {
+    @include adjust-font-size-to($fs-s);
+    text-transform: uppercase;
+  }
+
+  .field-name-title {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .field-name-node-link {
+    a {
+      @extend .link--more;
+    }
+  }
+}

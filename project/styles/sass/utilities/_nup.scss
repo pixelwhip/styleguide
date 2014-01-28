@@ -1,0 +1,17 @@
+//
+// @file
+// Mixins for creating simple grids of elements.
+// ----------------------------------------------------------------------------
+@mixin nup-container {
+  @include clearfix;
+}
+
+@mixin nup-base($gutter: $w-gutter-half) {
+  @include box-sizing(border-box);
+  padding: 0 $gutter;
+  float: left;
+}
+
+@mixin nup-item($columns: 2) {
+  width: 100% / $columns;
+}

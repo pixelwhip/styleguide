@@ -1,0 +1,52 @@
+//
+// More Link
+//
+
+.link--more {
+  vertical-align: middle;
+  @include adjust-font-size-to($fs-s);
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &:after {
+    content: '\f105';
+    margin-left: .5em;
+    font-family: $ff-icon;
+    font-size: 1.75em;
+    vertical-align: -.125em;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Override built-in styles.
+.more-link a,
+a.more-link,
+.page-search .node-readmore a {
+  @extend .link--more;
+  padding-right: 0;
+  background-image: none;
+}
+
+//
+// Button Link
+//
+
+.link--button {
+  display: inline-block;
+  padding: rhythm(1, $fs-s) 1em;
+  border-radius: 4px;
+  background-color: $blue-light;
+  color: $white;
+  @include adjust-font-size-to($fs-s, 4);
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $blue;
+    color: $white;
+  }
+}

@@ -1,0 +1,43 @@
+// Block - Pitch
+// ----------
+
+$bp-pitch-large: 660px;
+
+.block--pitch {
+  > .content {
+    @include magic-padding(40px rhythm(7));
+    background-color: $blue-light;
+    color: $white;
+
+    a {
+      color: $blue-lighter;
+
+      &:hover {
+        color: $blue-darker;
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    @include adjust-font-size-to($fs-xl);
+  }
+
+  .field-name-field-external-url {
+    a {
+      @extend .link--more;
+      color: $blue-dark;
+
+      &:hover {
+        color: $blue-darker;
+      }
+    }
+  }
+
+  @include breakpoint($bp-pitch-large, $no-query: '.lt-ie9' ) {
+    p {
+      @include adjust-font-size-to($fs-xxl, 7);
+      margin-bottom: rhythm(2, $fs-xxl);
+    }
+  }
+}

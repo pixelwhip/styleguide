@@ -1,0 +1,45 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{title}} | {{site.client}}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <!-- build:css(.tmp) {{assets}}/styles/main.css -->
+  <!-- injector:css -->
+  <!-- endinjector -->
+  <!-- endbuild -->
+</head>
+<body class="sg-body">
+  <header class="sg-masthead sg-constrain">
+    <h1 class="sg-site-title"><a href="/">{{site.client}}</a></h1>
+    {{> sg-hzmenu}}
+  </header>
+
+  <div class="sg-main sg-constrain">
+    {{> body }}
+  </div>
+
+  <footer class="sg-footer sg-constrain">
+    Built by <address><a href="{{site.agency-url}}">{{site.agency}}</a></address>
+  </header>
+  <!-- build:js {{assets}}/scripts/vendor.js -->
+  <!-- endbuild -->
+  <!-- build:js {{assets}}/scripts/main.js -->
+  <!-- injector:js -->
+  <!-- endinjector -->
+  <script src="{{assets}}/scripts/base.js"></script>
+  <script src="{{assets}}/scripts/highlight.js"></script>
+  <script src="{{assets}}/scripts/classie.js"></script>
+  <script src="{{assets}}/scripts/sg-hzmenu.js"></script>
+  <script src="{{assets}}/scripts/previews.js"></script>
+  <script>jQuery(function() {sgHorizontalMenu.init();});</script>
+  <!-- endbuild -->
+</body>
+</html>

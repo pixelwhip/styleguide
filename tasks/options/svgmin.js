@@ -1,9 +1,9 @@
-// Creates a custom modernizr build based on what modernizr features are in use.
+// Minifies SVG.
 module.exports = {
   dist: {
     files: [{
       expand: true,
-      cwd: '<%= yeoman.app %>/images',
+      cwd: '<%= yeoman.core %>/images',
       src: '{,*/}*.svg',
       dest: '<%= yeoman.dist %>/images'
     }]

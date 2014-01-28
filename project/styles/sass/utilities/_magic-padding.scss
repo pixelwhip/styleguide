@@ -1,0 +1,73 @@
+//
+// @file
+// Magic Padding mixins.
+//
+
+// Replaces top padding with a :before psuedo element with bottom margin, giving
+//  the illusion of the top padding collapsing with the top margin of the
+//  first child within the element.
+//
+// @param $value
+//    Any CSS measurement.
+
+@mixin magic-padding-top($value) {
+  &:before {
+    content: '';
+    display: block;
+    margin-bottom: $value;
+    height: .001em;
+  }
+}
+
+// Replaces bottom padding with an :after psuedo element with top margin, giving
+//  the illusion of the bottom padding collapsing with the bottom margin of the
+//  last child within the element.
+//
+// @param $value
+//    Any CSS measurement.
+
+@mixin magic-padding-bottom($value) {
+  &:after {
+    content: '';
+    display: block;
+    margin-top: $value;
+    height: .001em;
+  }
+}
+
+//
+// Adds padding to all four sides of an element. Replacing bottom padding with
+//  an :after psuedo element with top margin.
+//
+// @param $values
+//    Same as CSS shorthand padding.
+//
+
+@mixin magic-padding($values) {
+  $length: length($values);
+  $top: nth($values, 1);
+  $right: $top;
+  $bottom: $top;
+  $left: $top;
+
+  @if $length == 2 {
+    $right: nth($values, 2);
+    $left: $right;
+  }
+
+  @else if $length == 3 {
+    $right: nth($values, 2);
+    $bottom: nth($values, 3);
+    $left: $right;
+  }
+
+  @else if $length >= 4 {
+    $right: nth($values, 2);
+    $bottom: nth($values, 3);
+    $left: nth($values, 4);
+  }
+
+  padding: 0 $right 0 $left;
+  @include magic-padding-top($top);
+  @include magic-padding-bottom($bottom);
+}

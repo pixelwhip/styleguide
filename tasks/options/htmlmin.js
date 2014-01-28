@@ -13,7 +13,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: '<%= yeoman.app %>',
+      cwd: '<%= yeoman.core %>',
       src: '*.html',
       dest: '<%= yeoman.dist %>'
     }]

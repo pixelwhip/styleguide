@@ -1,0 +1,17 @@
+---
+layout: default.hbs
+---
+<header class="sg-item-header">
+  <h1 class="sg-title">{{title}}</h1>
+  <p class="sg-description">{{{description}}}</p>
+</header>
+<div class="sg-item">
+{{#markdown}}
+{{body}}
+{{/markdown}}
+</div>
+{{#if showcode}}
+<pre class="sg-code"><code>{{{ decode pagination.index.page}}}</code></pre>
+{{/if}}
+
+{{> variants}}

@@ -1,0 +1,24 @@
+// BASE CLASS
+// ----------
+
+.block--utility {
+  > h2 {
+    visibility: hidden;
+    display: none;
+  }
+
+  .nav {
+    > li {
+      display: inline-block;
+
+      > a {
+        color: $gray;
+
+        &:hover {
+          background-color: transparent;
+          color: $blue-light;
+        }
+      }
+    }
+  }
+}

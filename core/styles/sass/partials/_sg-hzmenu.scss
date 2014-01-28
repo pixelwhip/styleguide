@@ -1,0 +1,146 @@
+// Based on http://tympanus.net/codrops/2013/04/17/slide-and-push-menus/
+
+// Menu Container
+.sg-hzmenu {
+  width: 100%;
+}
+
+/* general ul style */
+.sg-hzmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* first level ul style */
+.sg-hzmenu > ul,
+.sg-hzmenu .sg-hzsub-inner {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sg-hzmenu > ul {
+  text-align: right;
+}
+
+.sg-hzmenu .sg-hzsub-inner {
+  text-align: left;
+}
+
+.sg-hzmenu > ul > li {
+  display: inline-block;
+}
+
+.sg-hzmenu > ul > li > a {
+  font-weight: 700;
+  padding: 1em 2em;
+  color: #999;
+  display: inline-block;
+}
+
+.sg-hzmenu > ul > li > a:hover {
+  color: #2e2d29;
+}
+
+.sg-hzmenu > ul > li.sg-hzopen a,
+.sg-hzmenu > ul > li.sg-hzopen > a:hover {
+  color: #fff;
+  background: #2e2d29;
+}
+
+/* sub-menu */
+.sg-hzmenu .sg-hzsub {
+  display: none;
+  position: absolute;
+  background: #2e2d29;
+  width: 100%;
+  left: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.sg-hzopen .sg-hzsub {
+  display: block;
+}
+
+.sg-hzmenu .sg-hzsub-inner > div {
+  width: 33%;
+  float: left;
+  padding: 0 20px 0;
+}
+
+.sg-hzmenu .sg-hzsub-inner:before,
+.sg-hzmenu .sg-hzsub-inner:after {
+  content: " ";
+  display: table;
+}
+
+.sg-hzmenu .sg-hzsub-inner:after {
+  clear: both;
+}
+
+.sg-hzmenu .sg-hzsub-inner > div a {
+  line-height: 2em;
+}
+
+.sg-hzsub h4 {
+  color: #afdefa;
+  padding: 2em 0 0.6em;
+  margin: 0;
+  font-size: 160%;
+  font-weight: 300;
+}
+
+/* Examples for media queries */
+
+@media screen and (max-width: 52.75em) {
+  .sg-hzmenu {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 43em) {
+
+  .sg-hzmenu {
+    font-size: 120%;
+    border: none;
+  }
+
+  .sg-hzmenu > ul,
+  .sg-hzmenu .sg-hzsub-inner {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sg-hzmenu .sg-hzsub-inner {
+    padding: 0 2em;
+    font-size: 75%;
+  }
+
+  .sg-hzmenu > ul > li {
+    display: block;
+    border-bottom: 4px solid #2e2d29;
+  }
+
+  .sg-hzmenu > ul > li > a {
+    display: block;
+    padding: 1em 3em;
+  }
+
+  .sg-hzmenu .sg-hzsub {
+    position: relative;
+  }
+
+  .sg-hzsub h4 {
+    padding-top: 0.6em;
+  }
+}
+
+@media screen and (max-width: 36em) {
+  .sg-hzmenu .sg-hzsub-inner > div {
+    width: 100%;
+    float: none;
+    padding: 0 2em;
+  }
+}

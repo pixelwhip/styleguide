@@ -1,0 +1,12 @@
+@mixin image-replace-hide-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 200%;
+}
+
+@mixin image-replace-size ($ht-height: 18px, $ht-width: 18px, $ht-display: inline-block) {
+  display: $ht-display;
+  width: $ht-width;
+  height: $ht-height;
+}
+

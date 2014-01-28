@@ -1,0 +1,57 @@
+//
+// @file
+// Views specific styles.
+//
+// If styles can be used across views, they should
+// go in elements/_lists.scss instead.
+// ----------------------------------------------------------------------------
+
+//
+// Exposed Filters
+//
+
+.view-filters {
+  background-color: $gray-white;
+
+  .views-exposed-widgets {
+    @include magic-padding(rhythm(2) 12px);
+  }
+
+  .views-exposed-widget {
+    float: none;
+    margin: rhythm(2) 0;
+    padding: 0;
+  }
+
+  // Checkboxes
+  .bef-checkboxes {
+    .form-item {
+      @include inline-block;
+      margin-right: 12px;
+      margin-left: 12px;
+      @include adjust-font-size-to($fs-m);
+      min-width: 7em;
+
+      > label {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .views-submit-button {
+    padding-top: 0;
+
+    .form-submit {
+      @include button--medium;
+      margin-top: 0;
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.views-widget-filter-field_event_type_tid {
+  > label {
+    display: none;
+  }
+}

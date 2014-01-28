@@ -3,20 +3,20 @@ module.exports = {
     options: {
       flatten: true,
       assets: '<%= yeoman.dist %>/assets',
-      layoutdir: '<%= yeoman.app %>/templates/layouts/',
+      layoutdir: '<%= yeoman.tmp %>/templates/layouts/',
       layout: 'default.hbs',
-      helpers: ['<%= yeoman.app %>/helpers/**/*.js' ],
-      data: '<%= yeoman.app %>/data/*.{json,yml}',
-      partials: '<%= yeoman.app %>/templates/partials/*.hbs'
+      helpers: ['<%= yeoman.tmp %>/helpers/**/*.js' ],
+      data: '<%= yeoman.tmp %>/data/*.{json,yml}',
+      partials: '<%= yeoman.tmp %>/templates/partials/*.hbs'
     },
     files: [
       {
-        '<%= yeoman.dist %>/': ['<%= yeoman.app %>/templates/pages/*.hbs']
+        '<%= yeoman.dist %>/': ['<%= yeoman.tmp %>/templates/pages/*.hbs']
       },
       {
         layout: 'item.hbs',
         dest: '<%= yeoman.dist %>/',
-        src: '<%= yeoman.app %>/content/*.hbs'
+        src: '<%= yeoman.tmp %>/content/*.hbs'
       },
     ]
   }

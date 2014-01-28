@@ -3,7 +3,7 @@ module.exports = {
     files: [{
       expand: true,
       dot: true,
-      cwd: '<%= yeoman.app %>',
+      cwd: '<%= yeoman.core %>',
       dest: '<%= yeoman.dist %>',
       src: [
         '*.{ico,png,txt}',
@@ -16,22 +16,57 @@ module.exports = {
   styles: {
     expand: true,
     dot: true,
-    cwd: '<%= yeoman.app %>/styles',
+    cwd: '<%= yeoman.tmp %>/assets/styles/',
     dest: '<%= yeoman.dist %>/assets/styles/',
+    src: '{,*/}*.css'
+  },
+  styles_core: {
+    expand: true,
+    dot: true,
+    cwd: '<%= yeoman.core %>/styles/css',
+    dest: '<%= yeoman.tmp %>/assets/styles/',
+    src: '{,*/}*.css'
+  },
+  styles_project: {
+    expand: true,
+    dot: true,
+    cwd: '<%= yeoman.project %>/styles/css',
+    dest: '<%= yeoman.tmp %>/assets/styles/',
     src: '{,*/}*.css'
   },
   scripts: {
     expand: true,
     dot: true,
-    cwd: '<%= yeoman.app %>/scripts',
+    cwd: '<%= yeoman.tmp %>/assets/scripts',
     dest: '<%= yeoman.dist %>/assets/scripts/',
     src: '**/*.js'
   },
-  bower: {
+  scripts_core: {
     expand: true,
     dot: true,
-    cwd: '<%= yeoman.app %>/bower_components',
-    dest: '<%= yeoman.dist %>/bower_components/',
-    src: '**/*.{js,css}'
+    cwd: '<%= yeoman.core %>/scripts',
+    dest: '<%= yeoman.dist %>/assets/scripts/',
+    src: '**/*.js'
+  },
+  scripts_project: {
+    expand: true,
+    dot: true,
+    cwd: '<%= yeoman.project %>/scripts',
+    dest: '<%= yeoman.dist %>/assets/scripts/',
+    src: '**/*.js'
+  },
+  core: {
+    expand: true,
+    dot: true,
+    cwd: '<%= yeoman.core %>',
+    dest: '<%= yeoman.tmp %>',
+    src: ['**/*', '!styles/**/*'] // Exclude styles, they are handled elsewhere.
+  },
+  project: {
+    expand: true,
+    dot: true,
+    cwd: 'project',
+    dest: '<%= yeoman.tmp %>',
+    src: ['**/*', '!styles/**/*'] // Exclude styles, they are handled elsewhere.
   }
 };

@@ -1,0 +1,11 @@
+//
+// @file
+// Drupal Message styles.
+// ----------------------------------------------------------------------------
+
+// Messages region
+#messages {
+  @include clearfix;
+  font-weight: 600;
+  padding: rhythm(4) $w-gutter-half rhythm(1);
+}

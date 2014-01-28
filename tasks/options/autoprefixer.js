@@ -6,7 +6,7 @@ module.exports = {
   dist: {
     files: [{
       expand: true,
-      cwd: '<%= yeoman.tmp %>/styles/',
+      cwd: '<%= yeoman.tmp %>/assets/styles/',
       src: '{,*/}*.css',
       dest: '<%= yeoman.dist %>/assets/styles/'
     }]
