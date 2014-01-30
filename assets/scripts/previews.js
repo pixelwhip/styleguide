@@ -21,7 +21,7 @@
   var pseudoRe = new RegExp(":((" + pseudos.join(")|(") + "))", "gi");
   var processedPseudoClasses = toArray(document.styleSheets)
     .map(function(ss) {
-      return toArray(ss.cssRules)
+      return ss.cssRules === null ? null : toArray(ss.cssRules)
         .filter(function(rule) {
           // Keep only rules with pseudo classes.
           return rule.selectorText && rule.selectorText.match(pseudoRe);

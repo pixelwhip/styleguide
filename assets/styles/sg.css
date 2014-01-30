@@ -1,205 +1,200 @@
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
+/* line 4, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
 
-  line {
-    font-family: \000034;
-  }
-}
-
-#sg-menu-container {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  right: -240px;
-  width: 240px;
-  height: 100%;
-  background: #454545;
-  font-family: sans-serif;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
-
-  line {
-    font-family: \0000320;
-  }
-}
-
-#sg-menu-container.is-open {
-  right: 0px;
-}
-
-@media screen and (max-height: 26.375em) {
-@media -sass-debug-info {
-    filename {
-      font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-    }
-
-    line {
-      font-family: \0000326;
-    }
-}
-
-  #sg-menu-container {
-    right: -190px;
-    width: 190px;
-    font-size: 90%;
-  }
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
-
-  line {
-    font-family: \0000334;
-  }
-}
-
-#sg-menu-toggle {
-  position: absolute;
-  top: 20px;
-  right: 100%;
-  width: 42px;
-  height: 42px;
-  background-color: #333;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
-
-  line {
-    font-family: \0000347;
-  }
-}
-
-.sg-menu {
-  height: 100%;
+.sg-hzmenu {
   width: 100%;
-  overflow-y: scroll;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
+/* general ul style */
 
-  line {
-    font-family: \0000353;
-  }
-}
+/* line 9, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
 
-.sg-menu-label {
-  color: #ddd;
-  font-size: 14px;
-  padding: 20px;
+.sg-hzmenu ul {
   margin: 0;
-  font-weight: 300;
-  background: #333;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
-
-  line {
-    font-family: \0000364;
-  }
-}
-
-.sg-menu-list {
   padding: 0;
-  margin: 0;
+  list-style-type: none;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
+/* first level ul style */
 
-  line {
-    font-family: \0000369;
-  }
+/* line 17, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu > ul,
+.sg-hzmenu .sg-hzsub-inner {
+  max-width: 64em;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.sg-menu-item {
-  display: block;
-  margin: 0;
+/* line 23, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu > ul {
+  text-align: right;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
+/* line 27, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
 
-  line {
-    font-family: \0000374;
-  }
+.sg-hzmenu .sg-hzsub-inner {
+  text-align: left;
 }
 
-.sg-menu-link {
-  display: block;
-  padding: 1em 20px;
-  border-bottom: 1px solid #3c3c3c;
+/* line 31, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu > ul > li {
+  display: inline-block;
+}
+
+/* line 35, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu > ul > li > a {
+  font-weight: 700;
+  padding: 1em 2em;
+  color: #999;
+  display: inline-block;
+}
+
+/* line 42, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu > ul > li > a:hover {
+  color: #2e2d29;
+}
+
+/* line 47, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu > ul > li.sg-hzopen a,
+.sg-hzmenu > ul > li.sg-hzopen > a:hover {
   color: #fff;
-  font-size: .875em;
+  background: #2e2d29;
+}
+
+/* sub-menu */
+
+/* line 53, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu .sg-hzsub {
+  display: none;
+  position: absolute;
+  background: #2e2d29;
+  width: 100%;
+  left: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* line 63, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzopen .sg-hzsub {
+  display: block;
+}
+
+/* line 67, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu .sg-hzsub-inner > div {
+  width: 33%;
+  float: left;
+  padding: 0 20px 0;
+}
+
+/* line 74, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu .sg-hzsub-inner:before,
+.sg-hzmenu .sg-hzsub-inner:after {
+  content: " ";
+  display: table;
+}
+
+/* line 79, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu .sg-hzsub-inner:after {
+  clear: both;
+}
+
+/* line 83, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzmenu .sg-hzsub-inner > div a {
+  line-height: 2em;
+}
+
+/* line 87, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+.sg-hzsub h4 {
+  color: #afdefa;
+  padding: 2em 0 0.6em;
+  margin: 0;
+  font-size: 160%;
   font-weight: 300;
-  text-decoration: none;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
+/* Examples for media queries */
 
-  line {
-    font-family: \0000383;
-  }
-}
+@media screen and (max-width: 52.75em) {
+  /* line 98, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
 
-.sg-menu-link:hover {
-  background: #777;
-}
-
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/partials\/_sg-menu\.scss;
-  }
-
-  line {
-    font-family: \0000387;
+  .sg-hzmenu {
+    font-size: 80%;
   }
 }
 
-.sg-menu-link:active {
-  background: #afafaf;
-  color: #47a3da;
-}
+@media screen and (max-width: 43em) {
+  /* line 105, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
+  .sg-hzmenu {
+    font-size: 120%;
+    border: none;
   }
 
-  line {
-    font-family: \0000329;
+  /* line 111, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzmenu > ul,
+  .sg-hzmenu .sg-hzsub-inner {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* line 116, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzmenu .sg-hzsub-inner {
+    padding: 0 2em;
+    font-size: 75%;
+  }
+
+  /* line 121, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzmenu > ul > li {
+    display: block;
+    border-bottom: 4px solid #2e2d29;
+  }
+
+  /* line 126, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzmenu > ul > li > a {
+    display: block;
+    padding: 1em 3em;
+  }
+
+  /* line 131, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzmenu .sg-hzsub {
+    position: relative;
+  }
+
+  /* line 135, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzsub h4 {
+    padding-top: 0.6em;
   }
 }
+
+@media screen and (max-width: 36em) {
+  /* line 141, ../../../core/styles/sass/partials/_sg-hzmenu.scss */
+
+  .sg-hzmenu .sg-hzsub-inner > div {
+    width: 100%;
+    float: none;
+    padding: 0 2em;
+  }
+}
+
+/* line 29, ../../../core/styles/sass/sg.scss */
 
 .sg-masthead,
 .sg-footer,
@@ -214,15 +209,7 @@
   font-family: sans-serif;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000333;
-  }
-}
+/* line 33, ../../../core/styles/sass/sg.scss */
 
 .sg-masthead a,
 .sg-footer a,
@@ -236,15 +223,7 @@
   color: #666;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000336;
-  }
-}
+/* line 36, ../../../core/styles/sass/sg.scss */
 
 .sg-masthead a:hover,
 .sg-footer a:hover,
@@ -258,73 +237,51 @@
   color: #444;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
+/* line 46, ../../../core/styles/sass/sg.scss */
 
-  line {
-    font-family: \0000346;
-  }
+.sg-body {
+  padding: 0;
 }
 
+/* line 50, ../../../core/styles/sass/sg.scss */
+
 .sg-constrain {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000355;
-  }
-}
+/* line 59, ../../../core/styles/sass/sg.scss */
 
 .sg-masthead {
-  padding: 6px 20px;
+  position: relative;
+  z-index: 9999;
+  padding: 0 20px;
+  border-bottom: 4px solid #333;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000360;
-  }
-}
+/* line 67, ../../../core/styles/sass/sg.scss */
 
 .sg-site-title {
   font-size: 14px;
-  margin: 0;
+  margin: 18px 0;
+  float: left;
+  white-space: nowrap;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000365;
-  }
-}
+/* line 74, ../../../core/styles/sass/sg.scss */
 
 .sg-site-client {
   font-size: 1em;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
+/* line 82, ../../../core/styles/sass/sg.scss */
 
-  line {
-    font-family: \0000373;
-  }
+.sg-main {
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+/* line 91, ../../../core/styles/sass/sg.scss */
 
 .sg-footer {
   padding: 20px;
@@ -332,44 +289,20 @@
   clear: both;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000379;
-  }
-}
+/* line 97, ../../../core/styles/sass/sg.scss */
 
 .sg-footer address {
   display: inline;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000388;
-  }
-}
+/* line 106, ../../../core/styles/sass/sg.scss */
 
 .sg-item-header {
   margin-bottom: 42px;
   border-bottom: #dddddd 1px solid;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \0000393;
-  }
-}
+/* line 111, ../../../core/styles/sass/sg.scss */
 
 .sg-title {
   letter-spacing: -.03em;
@@ -378,44 +311,20 @@
   margin-bottom: 12px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003101;
-  }
-}
+/* line 119, ../../../core/styles/sass/sg.scss */
 
 .sg-subhead {
   font-size: 24px;
   margin-bottom: 12px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003107;
-  }
-}
+/* line 125, ../../../core/styles/sass/sg.scss */
 
 .sg-description {
   font-size: 15px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003112;
-  }
-}
+/* line 130, ../../../core/styles/sass/sg.scss */
 
 .sg-label,
 .sg-usage--compact > dt {
@@ -425,44 +334,20 @@
   color: #999999;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003124;
-  }
-}
+/* line 142, ../../../core/styles/sass/sg.scss */
 
 .sg-usage--compact {
   font-size: 12px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003128;
-  }
-}
+/* line 146, ../../../core/styles/sass/sg.scss */
 
 .sg-usage--compact > dt,
 .sg-usage--compact > dd {
   display: inline;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003132;
-  }
-}
+/* line 150, ../../../core/styles/sass/sg.scss */
 
 .sg-usage--compact > dt {
   font-size: 1em;
@@ -470,44 +355,20 @@
   margin-right: 6px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003138;
-  }
-}
+/* line 156, ../../../core/styles/sass/sg.scss */
 
 .sg-usage--compact > dt:after {
   content: ":";
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003143;
-  }
-}
+/* line 161, ../../../core/styles/sass/sg.scss */
 
 .sg-usage--compact > dd {
   margin-right: 24px;
   margin-left: 0;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003153;
-  }
-}
+/* line 171, ../../../core/styles/sass/sg.scss */
 
 .sg-color {
   display: inline-block;
@@ -516,15 +377,7 @@
   margin-bottom: 18px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003160;
-  }
-}
+/* line 178, ../../../core/styles/sass/sg.scss */
 
 .sg-color-swatch {
   width: 72px;
@@ -532,29 +385,13 @@
   border-radius: 50%;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003166;
-  }
-}
+/* line 184, ../../../core/styles/sass/sg.scss */
 
 .sg-color-info {
   font-size: 12px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003171;
-  }
-}
+/* line 189, ../../../core/styles/sass/sg.scss */
 
 .sg-color-label {
   float: left;
@@ -564,44 +401,20 @@
   width: 3.25em;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003179;
-  }
-}
+/* line 197, ../../../core/styles/sass/sg.scss */
 
 .sg-color-def {
   float: left;
   margin: 0;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003188;
-  }
-}
+/* line 206, ../../../core/styles/sass/sg.scss */
 
 .sg-font {
   margin-bottom: 60px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003192;
-  }
-}
+/* line 210, ../../../core/styles/sass/sg.scss */
 
 .sg-font-size {
   float: left;
@@ -612,15 +425,7 @@
   width: 60px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003202;
-  }
-}
+/* line 220, ../../../core/styles/sass/sg.scss */
 
 .sg-font-sample {
   padding-top: 12px;
@@ -630,15 +435,23 @@
   margin-left: 0;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
+/* line 228, ../../../core/styles/sass/sg.scss */
 
-  line {
-    font-family: \00003215;
-  }
+.sg-code {
+  margin-top: 40px;
+  padding: 0;
+  font-size: 13px;
+  overflow-x: scroll;
 }
+
+/* line 234, ../../../core/styles/sass/sg.scss */
+
+.sg-code code {
+  margin: 0;
+  white-space: pre;
+}
+
+/* line 245, ../../../core/styles/sass/sg.scss */
 
 [sg-layout-container] {
   clear: both;
@@ -649,15 +462,7 @@
   min-height: 200px;
 }
 
-@media -sass-debug-info {
-  filename {
-    font-family: file\:\/\/\/Users\/pixelwhip\/Sites\/style-guide\/src\/styles\/sg\.scss;
-  }
-
-  line {
-    font-family: \00003224;
-  }
-}
+/* line 254, ../../../core/styles/sass/sg.scss */
 
 [sg-layout-item] {
   background-color: rgba(0, 0, 255, 0.1);
