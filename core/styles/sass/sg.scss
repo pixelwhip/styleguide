@@ -256,3 +256,25 @@ $ff-body: sans-serif;
   outline: rgba(black, .2) solid 1px;
   min-height: 200px;
 }
+
+.sg-toc {
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 10em;
+    margin: 12px;
+
+    > a {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.sg-site-brand {
+  text-align: center;
+  margin: 1em auto;
+  color: #333;
+  font-weight: 600;
+}
