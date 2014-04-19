@@ -469,3 +469,29 @@
   outline: rgba(0, 0, 0, 0.2) solid 1px;
   min-height: 200px;
 }
+
+/* line 261, ../../../core/styles/sass/sg.scss */
+
+.sg-toc > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 10em;
+  margin: 12px;
+}
+
+/* line 267, ../../../core/styles/sass/sg.scss */
+
+.sg-toc > li > a {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+
+/* line 275, ../../../core/styles/sass/sg.scss */
+
+.sg-site-brand {
+  text-align: center;
+  margin: 1em auto;
+  color: #333;
+  font-weight: 600;
+}
